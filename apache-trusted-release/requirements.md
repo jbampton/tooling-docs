@@ -6,14 +6,14 @@ While reading consider these Notes:
 - KEYS file requirements need further discussion before inclusion.
 - See the [README](../README.md) for where to discuss these requirements.
 
-1. Automate the Release Process
+## 1. Automate the Release Process
 
    - Minimize human interaction.
    - Community participation on **Release Votes** remains via email.
    - Record all of the key events for tracking operations and performance.
    - Projects can quickly benefit.
 
-2. Apache Trusted Release Platform
+## 2. Apache Trusted Release Platform
 
    - Incorporate all Project Releases.
      - Download page. (dist/release)
@@ -27,7 +27,7 @@ While reading consider these Notes:
    - Replace the SVN Dist Repository? This would be an Infra task.
      _My warning is that any change from SVN not be disruptive._
 
-3. Automate Release Process around Compliance
+## 3. Automate Release Process around Compliance
 
    - Meet Release Policy
      - Legal Policy
@@ -39,7 +39,7 @@ While reading consider these Notes:
    - Download Page including available SBOM and verification instructions.
    - Announcement Email.
 
-4. Automated Actions
+## 4. Automated Actions
 
    These requirements are by category and are not necessarily ordered.
 
@@ -80,7 +80,7 @@ While reading consider these Notes:
      - Once any manual steps are completed manually trigger the next step.
    - Announce Release via Email.
 
-5. Participate In the Ecosystem
+## 5. Participate In the Ecosystem
 
    - Assure that the ATR platform follows industry best practices.
    - Help lead the industry to better practices.
