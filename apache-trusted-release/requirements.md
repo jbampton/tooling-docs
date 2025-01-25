@@ -49,7 +49,9 @@ While reading consider these Notes:
      - Manual for steps that may require manual work first.
    - Procedures:
      - Maintain the SBOM.
-     - Check compliance with Security Release Policy.
+     - Check compliance:
+       - Security Policy.
+       - Legal Policy. (to the extent possible)
      - Signing Certificates.
      - Optional Digital Signatures - Windows / macOS.
    - Voting:
