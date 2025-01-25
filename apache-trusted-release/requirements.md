@@ -9,7 +9,7 @@ While reading consider these Notes:
 1. Automate the Release Process
 
    - Minimize human interaction.
-   - Community participation on **Release Votes** remains via email.ida
+   - Community participation on **Release Votes** remains via email.
    - Record all of the key events for tracking operations and performance.
    - Projects can quickly benefit.
 
@@ -24,7 +24,7 @@ While reading consider these Notes:
      - Release operation and performance.
    - Platform includes a RESTful API.
    - Simple addition of release metadata triggers automation.
-   - Replace the SVN Dist Repository? This is an Infra task.
+   - Replace the SVN Dist Repository? This would be an Infra task.
      _My warning is that any change from SVN not be disruptive._
 
 3. Automate Release Process around Compliance
