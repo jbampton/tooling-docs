@@ -1,9 +1,15 @@
 # Requirements (DRAFT)
 
+While reading consider these Notes:
+
+- This list attempts to avoid implementation details aside from existing practices.
+- KEYS file requirements need further discussion before inclusion.
+- See the [README](../README.md) for where to discuss these requirements.
+
 1. Automate the Release Process
 
    - Minimize human interaction.
-   - Community participation on **Release Votes** remains via email.
+   - Community participation on **Release Votes** remains via email.ida
    - Record all of the key events for tracking operations and performance.
    - Projects can quickly benefit.
 
