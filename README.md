@@ -10,6 +10,11 @@ The team's website source will be developed here as well.
 - Email to dev@tooling.apache.org
 - [ASF Slack Channel #tooling-discuss](https://the-asf.slack.com/archives/C086X8CKEMB)
 
+## How to contribute changes
+
+- Obvious typos may be committed directly
+- For additional pages and edits please create a branch and submit a PR.
+
 ## Apache Trusted Release Platform
 
 - [Requirements (DRAFT)](apache-trusted-release/requirements.md)
