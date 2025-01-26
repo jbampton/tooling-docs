@@ -1,6 +1,6 @@
 # ASF Tooling
 
-The Tooling team will manage development of key tooling efforts which will be documented and discussed as outlined on this page.
+The Tooling team manages development of key tooling efforts for The ASF, and documents and discusses them as outlined on this page.
 
 The team's website source will be developed here as well.
 
@@ -12,8 +12,8 @@ The team's website source will be developed here as well.
 
 ## How to contribute changes
 
-- Obvious typos may be committed directly
-- For additional pages and edits please create a branch and submit a PR.
+- You may commit corrections to obvious typos directly.
+- For additional pages and edits, please create a branch and submit a PR.
 
 ## Apache Trusted Release Platform
 
@@ -23,7 +23,7 @@ The team's website source will be developed here as well.
 
 TBD
 
-## Links to various useful infrastructure repositories
+## Links to various useful Infrastructure repositories
 
 - https://github.com/apache/infrastructure-asfquart
 - https://github.com/apache/infrastructure-gha-workflow-scanner
