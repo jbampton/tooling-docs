@@ -28,7 +28,7 @@ While reading consider these Notes:
    - Every project has a management interface. 
      - Current manual release practice is viewable.
      - Automated release status.
-     - Key management.
+     - **KEYS** file management including revoking keys.
      - Manual triggers.
      - Tracking performance.
    - Platform includes a RESTful API.
@@ -46,8 +46,7 @@ While reading consider these Notes:
      - Include dependency and license compliance.
      - Provide clear attribution and information about Release Votes.
    - Certificate and Credential Management
-     - KEYs files are hard to manage.
-     - Handle signing keys needed for automation.
+     - Manage the signing keys needed for automation.
    - Download Page including available SBOM and verification instructions.
    - Announcement Email.
 
@@ -66,7 +65,10 @@ While reading consider these Notes:
        - Legal Policy. (to the extent possible)
        - Distribution Policy is built into the **ATR**
      - Signing Certificates.
-     - Optional Digital Signatures - Windows / macOS.
+     - Optional Digital Signatures:
+       - Windows.
+       - macOS.
+       - (others TBD).
    - Voting:
      - Perform the Release Vote on the project dev list.
      - PMC votes through ATR, but emails are sent for each.
@@ -83,12 +85,12 @@ While reading consider these Notes:
        - Node
        - DockerHub
        - Artifactory
-       - (A prioritized list)
+       - (others TDB)
    - Candidates:
      - Some release candidates may be distributed to test repositories.
        - Apache staging repository
        - Test PyPi
-       - (others?)
+       - (others TDB)
      - Developers may want to test those artifacts while voting.
    - Release Summary Email.
      - Include instructions about any optional repositories not automated.
