@@ -3,7 +3,6 @@
 While reading consider these Notes:
 
 - This list attempts to avoid implementation details aside from existing practices.
-- KEYS file requirements need further discussion before inclusion.
 - See the [README](../README.md) for where to discuss these requirements.
 
 ## 1. Automate the Release Process
@@ -13,21 +12,31 @@ While reading consider these Notes:
    - Record all of the key events for tracking operations and performance.
    - Projects can quickly benefit.
 
-## 2. Apache Trusted Release Platform
+## 2. Community
+
+   - Work with a selection of **Apache** projects and **Infra** for **User Acceptance Testing (UAT)**.
+   - Co-ordinate with **Infra** on roles and responsibility.
+   - Assure that the **ATR platform** follows industry best practices especially regarding **SBOMs** and **Certificate Management**.
+   - Help lead the industry to better practices.
+   - If necessary, work within the **ASF** on **Release Policy** improvements. 
+
+## 3. Apache Trusted Release Platform (ATR)
 
    - Incorporate all Project Releases.
-     - Download page. (dist/release)
+     - Download page. (dist/release) _Infra managed downloads.apache.org_
      - Release Candidate pages. (dist/dev)
    - Every project has a management interface. 
      - Current manual release practice is viewable.
      - Automated release status.
-     - Release operation and performance.
+     - Key management.
+     - Manual triggers.
+     - Tracking performance.
    - Platform includes a RESTful API.
    - Simple addition of release metadata triggers automation.
    - Replace the SVN Dist Repository? This would be an Infra task.
      _My warning is that any change from SVN not be disruptive._
 
-## 3. Automate Release Process around Compliance
+## 4. Automate Release Process around Compliance
 
    - Meet Release Policy
      - Legal Policy
@@ -36,10 +45,13 @@ While reading consider these Notes:
    - SBOMs and Attestations
      - Include dependency and license compliance.
      - Provide clear attribution and information about Release Votes.
+   - Certificate and Credential Management
+     - KEYs files are hard to manage.
+     - Handle signing keys needed for automation.
    - Download Page including available SBOM and verification instructions.
    - Announcement Email.
 
-## 4. Automated Actions
+## 5. Automated Actions
 
    These requirements are by category and are not necessarily ordered.
 
@@ -52,6 +64,7 @@ While reading consider these Notes:
      - Check compliance:
        - Security Policy.
        - Legal Policy. (to the extent possible)
+       - Distribution Policy is built into the **ATR**
      - Signing Certificates.
      - Optional Digital Signatures - Windows / macOS.
    - Voting:
@@ -81,9 +94,3 @@ While reading consider these Notes:
      - Include instructions about any optional repositories not automated.
      - Once any manual steps are completed manually trigger the next step.
    - Announce Release via Email.
-
-## 5. Participate In the Ecosystem
-
-   - Assure that the ATR platform follows industry best practices.
-   - Help lead the industry to better practices.
-   - Work within ASF should policy changes be desirable. 
