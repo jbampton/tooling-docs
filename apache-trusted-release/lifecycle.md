@@ -8,7 +8,7 @@ flowchart TD
     A -->|automatically triggered| C
     B -->|manually triggered| C
     subgraph ATR Platform
-    D@{ shape: processes, label: "Evaluate Candidate" }
+    D@{ shape: processes, label: "Audit Candidate" }
     C --> D
     E@{ shape: sl-rect, label: "Release Vote" }
     F@{ shape: dbl-circ, label: "Failed" }
