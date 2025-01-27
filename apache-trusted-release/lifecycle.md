@@ -9,11 +9,13 @@ flowchart TD
     B -->|manually triggered| C
     subgraph ATR Platform
     D@{ shape: processes, label: "Evaluate Candidate" }
+    DD@{ shape: process, label: "Sign Candidate" }
     C --> D
     E@{ shape: sl-rect, label: "Release Vote" }
     F@{ shape: dbl-circ, label: "Failed" }
     FF@{ shape: dbl-circ, label: "Distribution\nFailed" }
-    D -->|pass| E
+    D -->|pass| DD
+    DD --> E
     D -->|failure| F
     F -->|new candidate| C
     F -->|abandon| K
@@ -28,7 +30,6 @@ flowchart TD
     G --> I
     G -->|failure| FF
     H -->|manually triggered| I
-    H -->|failure| FF
     J@{ shape: dbl-circ, label: "Released" }
     JJ@{ shape: docs, label: "Release" }
     JJ --> G
@@ -58,6 +59,9 @@ flowchart TD
 
 **Evaluate Candidate**
 : Report on the Candidate by performing numerous checks for policy compliance. Fails if compliance minimums are unmet.
+
+**Sign Candidate**
+: Optionally sign packages using digital certificates through a service.
 
 **Release Vote**
 : Release policy requires a Vote on the project's dev list. The ATR will record votes in the platform and also on the mailing list. The Vote will be summarized and the PMC Vote recorded in the releases metadata.
