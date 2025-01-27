@@ -20,7 +20,7 @@ flowchart TD
     FF -->|retry| G
     FF -->|abandon| K
     G@{ shape: processes, label: "Distribute" }
-    E -->|pass| G
+    E -->|pass| JJ
     E -->|failure| F
     H@{ shape: trap-t, label: "Manual Distribution" }
     G -->|optional| H
@@ -29,7 +29,9 @@ flowchart TD
     G -->|failure| FF
     H -->|manually triggered| I
     H -->|failure| FF
-    J@{ shape: docs, label: "Release" }
+    J@{ shape: dbl-circ, label: "Released" }
+    JJ@{ shape: docs, label: "Release" }
+    JJ --> G
     I --> J
     K@{ shape: dbl-circ, label: "Revoked" }
     L@{ shape: trap-t, label: "Announce CVEs" }
