@@ -52,7 +52,8 @@ While reading consider these Notes:
 
 ## 5. Automated Actions
 
-   These requirements are by category and are not necessarily ordered.
+   These requirements are by category and are not necessarily ordered. Here is s flow chart showing the
+   [Release Lifecycle](lifecycle.md).
 
    - Triggers:
      - Initiation by GH Action and/or GitBox Event.
