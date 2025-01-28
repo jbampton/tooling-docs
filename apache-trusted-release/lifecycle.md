@@ -9,21 +9,22 @@ flowchart TD
     B -->|manually triggered| C
     subgraph ATR Platform
     D@{ shape: processes, label: "Evaluate Candidate" }
-    DD@{ shape: process, label: "Sign Candidate" }
     C --> D
-    E@{ shape: sl-rect, label: "Release Vote" }
-    F@{ shape: dbl-circ, label: "Failed" }
-    FF@{ shape: dbl-circ, label: "Distribution\nFailed" }
+    DD@{ shape: process, label: "Sign Candidate" }
     D -->|pass| DD
-    DD --> E
+    E@{ shape: sl-rect, label: "Release Vote" }
+    JJ@{ shape: docs, label: "Release" }
+    E -->|pass| JJ
+    F@{ shape: dbl-circ, label: "Failed" }
     D -->|failure| F
+    E -->|failure| F
+    FF@{ shape: dbl-circ, label: "Distribution\nFailed" }
+    DD --> E
     F -->|new candidate| C
     F -->|abandon| K
     FF -->|retry| G
     FF -->|abandon| K
     G@{ shape: processes, label: "Distribute" }
-    E -->|pass| JJ
-    E -->|failure| F
     H@{ shape: trap-t, label: "Manual Distribution" }
     G -->|optional| H
     I[Announce Release]
@@ -31,15 +32,13 @@ flowchart TD
     G -->|failure| FF
     H -->|manually triggered| I
     J@{ shape: dbl-circ, label: "Released" }
-    JJ@{ shape: docs, label: "Release" }
     JJ --> G
     I --> J
     K@{ shape: dbl-circ, label: "Revoked" }
     L@{ shape: trap-t, label: "Announce CVEs" }
     J -->|revoke| K
     J -->|cves| L
-    L -->|announced| J
-    L -->|revoke| K
+    L -->|record cves| J
     end
 ```
 
@@ -90,3 +89,5 @@ flowchart TD
 **Revoked**
 : A Release in this state has been revoked or abandoned.
 
+**Announce CVEs**
+: At some moment after a release happens a project may announce CVEs that either impact a release or are solved by a release. The security team and PMC manage CVEs including announcements and publishing via cveprocess.apache.org The ATR will update SBOMs with new CVEs.
