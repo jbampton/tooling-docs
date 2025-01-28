@@ -7,29 +7,32 @@ flowchart TD
     C@{ shape: docs, label: "Release Candidate" }
     A -->|automatically triggered| C
     B -->|manually triggered| C
-    subgraph ATR Platform
+    subgraph Release Candidate
     D@{ shape: processes, label: "Evaluate Candidate" }
     C --> D
     DD@{ shape: process, label: "Sign Candidate" }
     D -->|pass| DD
+    GG@{ shape: processes, label: "Distribute Test" }
     E@{ shape: sl-rect, label: "Release Vote" }
-    JJ@{ shape: docs, label: "Release" }
-    E -->|pass| JJ
     F@{ shape: dbl-circ, label: "Failed" }
-    D -->|failure| F
     E -->|failure| F
-    FF@{ shape: dbl-circ, label: "Distribution\nFailed" }
-    DD --> E
+    D -->|failure| F
+    DD --> GG
+    GG --> E
+    end
+    E -->|pass| JJ
     F -->|new candidate| C
-    F -->|abandon| K
-    FF -->|retry| G
-    FF -->|abandon| K
+    subgraph Release
+    JJ@{ shape: docs, label: "Release" }
     G@{ shape: processes, label: "Distribute" }
     H@{ shape: trap-t, label: "Manual Distribution" }
     G -->|optional| H
-    I[Announce Release]
     G --> I
+    FF@{ shape: dbl-circ, label: "Distribution\nFailed" }
     G -->|failure| FF
+    I[Announce Release]
+    FF -->|retry| G
+    FF -->|abandon| K
     H -->|manually triggered| I
     J@{ shape: dbl-circ, label: "Released" }
     JJ --> G
@@ -61,6 +64,9 @@ flowchart TD
 
 **Sign Candidate**
 : Optionally sign packages using digital certificates through a service.
+
+**Distribute Test**
+: Release Candidates may be distributed to Test repositories.
 
 **Release Vote**
 : Release policy requires a Vote on the project's dev list. The ATR will record votes in the platform and also on the mailing list. The Vote will be summarized and the PMC Vote recorded in the releases metadata.
