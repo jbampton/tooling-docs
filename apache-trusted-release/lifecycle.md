@@ -84,14 +84,14 @@ flowchart TD
 **Release**
 : The release is a folder of files including metadata, SBOMs, public keys, signatures, and checksums.
 
-**Distribution Failed**
-: A Release may fail one or more of its Distribution Steps. This may be due to a problem with the destination. The project will need to manually retry. The distributions steps should include reasonable retry logic.
-
 **Distribute**
 : Release distribution will be automated for many channels.
 
 **Manual Distribution**
 : Some channels either require manual steps, or they are yet to be automated.
+
+**Distribution Failed**
+: A Release may fail one or more of its Distribution Steps. This may be due to a problem with the destination. The project will need to manually retry. The distributions steps should include reasonable retry logic.
 
 **Announce Release**
 : Send a compliant announcement of the release. This template will include release metadata.
