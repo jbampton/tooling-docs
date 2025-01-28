@@ -2,6 +2,7 @@
 
 ```mermaid
 flowchart TD
+    subgraph Apache Trusted Release
     A[GHA Secure Release Process]
     B[Current SVN Build Process]
     C@{ shape: docs, label: "Release Candidate" }
@@ -14,16 +15,18 @@ flowchart TD
     D -->|pass| DD
     GG@{ shape: processes, label: "Distribute Test" }
     E@{ shape: sl-rect, label: "Release Vote" }
+    JJJ@{ shape: dbl-circ, label: "Passes" }
     F@{ shape: dbl-circ, label: "Failed" }
-    E -->|failure| F
-    D -->|failure| F
+    E -->|pass| JJJ
+    E -->|fail| F
+    D -->|fail| F
+    F -->|new candidate| C
     DD --> GG
     GG --> E
     end
-    E -->|pass| JJ
-    F -->|new candidate| C
     subgraph Release
     JJ@{ shape: docs, label: "Release" }
+    JJJ --> JJ
     G@{ shape: processes, label: "Distribute" }
     H@{ shape: trap-t, label: "Manual Distribution" }
     G -->|optional| H
@@ -42,6 +45,7 @@ flowchart TD
     J -->|revoke| K
     J -->|cves| L
     L -->|record cves| J
+    end
     end
 ```
 
@@ -70,6 +74,9 @@ flowchart TD
 
 **Release Vote**
 : Release policy requires a Vote on the project's dev list. The ATR records votes in the platform and also on the mailing list. The Vote will be summarized and the PMC Vote recorded in the releases metadata.
+
+**Passes**
+: The Release Candidate has been accepted. Convert the candidate into a Release and proceed to Distribute and Announce the Release.
 
 **Failed**
 : A Release Candidate may end in this state. The project can either abandon it or update and resubmit it.
