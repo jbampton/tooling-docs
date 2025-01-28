@@ -55,7 +55,7 @@ flowchart TD
 : In a GitHub workflow the release candidate is built and validated following the Security Release Policy.
 
 **Current SVN Build Process**
-: This is our current SVN repository process for setting up a release candidate. Trigger the ATR automation by incuding release metadata.
+: This is our current SVN repository process for setting up a release candidate. Trigger the ATR automation by including release metadata.
 
 **Release Candidate**
 : A release candidate consists of a folder of release files including metadata, SBOMs, public keys, signatures, and checksums.
