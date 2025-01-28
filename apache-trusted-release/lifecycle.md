@@ -48,16 +48,16 @@ flowchart TD
 ## Definitions
 
 **GHA Secure Release Process**
-: In a github workflow the release candidate is built and validated following the Security Release Policy.
+: In a GitHub workflow the release candidate is built and validated following the Security Release Policy.
 
 **Current SVN Build Process**
-: This is our current svn repository process for setting up a release candidate. Trigger the ATR automation by incuding release metadata.
+: This is our current SVN repository process for setting up a release candidate. Trigger the ATR automation by incuding release metadata.
 
 **Release Candidate**
 : A release candidate consists of a folder of release files including metadata, SBOMs, public keys, signatures, and checksums.
 
 **ATR Platform**
-: Apache Trusted Release is a service with a web ui and restful api for managing the lifecycle of project releases.
+: Apache Trusted Release is a service with a web UI and restful API for managing the lifecycle of project releases.
 
 **Evaluate Candidate**
 : Report on the Candidate by performing numerous checks for policy compliance. Fails if compliance minimums are unmet.
@@ -69,10 +69,10 @@ flowchart TD
 : Release Candidates may be distributed to Test repositories.
 
 **Release Vote**
-: Release policy requires a Vote on the project's dev list. The ATR will record votes in the platform and also on the mailing list. The Vote will be summarized and the PMC Vote recorded in the releases metadata.
+: Release policy requires a Vote on the project's dev list. The ATR records votes in the platform and also on the mailing list. The Vote will be summarized and the PMC Vote recorded in the releases metadata.
 
 **Failed**
-: A Release Candidate may end in this state. The project can either abandon it or resubmit a new candidate.
+: A Release Candidate may end in this state. The project can either abandon it or update and resubmit it.
 
 **Release**
 : The release is a folder of files including metadata, SBOMs, public keys, signatures, and checksums.
@@ -90,10 +90,10 @@ flowchart TD
 : Send a compliant announcement of the release. This template will include release metadata.
 
 **Released**
-: Once the Release is distributed and announced this Release should remain in this state as long as it is available.
+: Once the Release is distributed and announced, this Release should remain in this state as long as it is available.
 
 **Revoked**
 : A Release in this state has been revoked or abandoned.
 
 **Announce CVEs**
-: At some moment after a release happens a project may announce CVEs that either impact a release or are solved by a release. The security team and PMC manage CVEs including announcements and publishing via cveprocess.apache.org The ATR will update SBOMs with new CVEs.
+: At some moment after a release happens a project may announce CVEs that either impact or are solved by a release. The security team and PMC manage CVEs including announcements and publishing via cveprocess.apache.org The ATR will update SBOMs with new CVEs.
