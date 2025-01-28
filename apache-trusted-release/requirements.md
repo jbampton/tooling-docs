@@ -52,7 +52,7 @@ While reading consider these Notes:
 
 ## 5. Automated Actions
 
-   These requirements are by category and are not necessarily ordered. Here is s flow chart showing the
+   These requirements are by category and are not necessarily ordered. Here is a flow chart showing the
    [Release Lifecycle](lifecycle.md).
 
    - Triggers:
@@ -63,7 +63,7 @@ While reading consider these Notes:
      - Maintain the SBOM.
      - Check compliance:
        - Security Policy.
-       - Legal Policy. (to the extent possible)
+       - Legal Policy (to the extent possible).
        - Distribution Policy is built into the **ATR**
      - Signing Certificates.
      - Optional Digital Signatures:
@@ -95,5 +95,5 @@ While reading consider these Notes:
      - Developers may want to test those artifacts while voting.
    - Release Summary Email.
      - Include instructions about any optional repositories not automated.
-     - Once any manual steps are completed manually trigger the next step.
+     - Once any manual steps are completed, manually trigger the next step.
    - Announce Release via Email.
