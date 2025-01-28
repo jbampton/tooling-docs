@@ -11,11 +11,12 @@ While reading consider these Notes:
    - Community participation on **Release Votes** remains via email.
    - Record all of the key events for tracking operations and performance.
    - Projects can quickly benefit.
+   - Infra costs and management complexity are decreased.
 
 ## 2. Community
 
    - Work with a selection of **Apache** projects and **Infra** for **User Acceptance Testing (UAT)**.
-   - Co-ordinate with **Infra** on roles and responsibility.
+   - Co-ordinate with **Infra** on roles and responsibility on this complex stack.
    - Assure that the **ATR platform** follows industry best practices especially regarding **SBOMs** and **Certificate Management**.
    - Help lead the industry to better practices.
    - If necessary, work within the **ASF** on **Release Policy** improvements. 
@@ -23,9 +24,9 @@ While reading consider these Notes:
 ## 3. Apache Trusted Release Platform (ATR)
 
    - Incorporate all Project Releases.
-     - Download page. (dist/release) _Infra managed downloads.apache.org_
-     - Release Candidate pages. (dist/dev)
-   - Every project has a management interface. 
+     - Download page. (migrated/mirrored from dist/release)
+     - Release Candidate pages. (migrated/mirrored from dist/dev)
+   - Every project has a management interface.
      - Current manual release practice is viewable.
      - Automated release status.
      - **KEYS** file management including revoking keys.
@@ -33,8 +34,6 @@ While reading consider these Notes:
      - Tracking performance.
    - Platform includes a RESTful API.
    - Simple addition of release metadata triggers automation.
-   - Replace the SVN Dist Repository? This would be an Infra task.
-     _My warning is that any change from SVN not be disruptive._
 
 ## 4. Automate Release Process around Compliance
 
