@@ -16,6 +16,7 @@ The team's website source will be developed here as well.
 ## How to contribute changes
 
 - You may commit corrections to obvious typos directly.
+- You may create and edit new pages you are working on individually.
 - For additional pages and edits, please create a branch and submit a PR.
 
 ## Apache Trusted Release Platform
