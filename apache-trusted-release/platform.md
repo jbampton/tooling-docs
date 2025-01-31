@@ -49,7 +49,7 @@ The co-ordinates make up the external path to objects. The metadata database pro
 - Latest product release: `/<stage>/<project>/<product>/latest/<file>`
 - Product release by version: `/<stage>/<project>/<product>/<version>/<file>`
 
-## Roles
+## User Roles
 
 1. Project PMC Member
    - binding vote
@@ -72,6 +72,8 @@ The co-ordinates make up the external path to objects. The metadata database pro
    - manage keys
    - perform actions
    - view all events
+
+> The authorization and authentication for `GitHub PATs` will be specific and fine-grained. The details are to be developed during implementation.
 
 ## Restful API
 
