@@ -19,15 +19,15 @@ The team's website source will be developed here as well.
 - You may create and edit new pages you are working on individually.
 - For additional pages and edits, please create a branch and submit a PR.
 
-## Apache Trusted Release Platform
+## Apache Trusted Release Platform (ATR)
 
-- [Requirements (DRAFT)](apache-trusted-release/requirements.md)
-- [Platform Specification](apache-trusted-release/platform.md)
+- [Requirements](apache-trusted-release/requirements.md)
+- [Platform Services](apache-trusted-release/platform.md)
 - [Release Lifecycle](apache-trusted-release/lifecycle.md)
-  - [Distributions](apache-trusted-release/distributions.md)
   - [Test Distributions](apache-trusted-release/test-distributions.md)
+  - [Distributions](apache-trusted-release/distributions.md)
 
-## Board Agenda Tool
+## Board Agenda Tool (BAT)
 
 TBD
 
