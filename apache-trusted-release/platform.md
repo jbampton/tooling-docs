@@ -3,7 +3,7 @@
 1. Datastore: https://releases.apache.org
 2. Task Runner: https://artifacts.apache.org
 
-> Willing to debate if the service stack split is necessary and start with a unitary monolith.
+> Monitoring the service stack will indicate if the stack split is indicated. Let's make sure that such a split is relatively quick.
 
 ## Datastore
 
@@ -52,37 +52,55 @@ The co-ordinates make up the external path to objects. The metadata database pro
 - Latest product release: `/<stage>/<project>/<product>/latest/<file>`
 - Product release by version: `/<stage>/<project>/<product>/<version>/<file>`
 
-### User Roles
+### Data Model
+
+Here is an introduction to the ATR's data model.
+
+> The following needs some work, but I wanted to have nomenclature for discussion.
+
+#### Projects.
+
+Projects are run by a PMC with members and committers, have metadata, vote policy settings, and products.
+
+4. **Products**. Zero or more products with separate releases from the main one. A product may override vote policy settings.
+3. **Public Signing Keys**. Release Managers have signing keys that are applied to all of packages in a release.
+2. **Release Manager**. One or more Release Managers who may sign the release packages.
+1. **Vote Policy Settings**. These are a set of choices which control how a release vote is conducted by the ATR. 
+
+Products that are not the main one have metadata, separate releases, and vote policy settings.
+   
+#### Releases
+
+Releases have stage and state, packages, votes and vote policy, cves both impacted and solved, and metadata.
+A release may override vote policy settings. The vote policy settings and signing keys used become release metadata.
+
+7. **CVEs**. For each release there are zero or more CVEs that impact this release. There may be CVEs that are solved this release.
+3. **Packages**. One or more triples of file, signature, and checksum that is a downloadable component of a release.
+6. **SBOMs**. Are in one or more acceptable SBOM formats and should be maintained using standard python libraries.
+1. **Stage**. A release is in one of three stages: Candidate, Current, or Revoked.
+2. **State**. A release state is either "at rest" or is performing a task in the release lifecycle.
+5. **Votes**. A release Vote is a monitored task of email communication and vote recording. Vote policy choices will provide choices.
+
+#### User Roles
 
 Multiple roles are possible and available actions are composed.
 
-1. Project PMC Member
-   - binding vote
-   - manage release
-   - manage metadata
-   - manage their keys
-   - perform actions
-2. Release Manager
-   - manage release
-   - manage metadata
-   - manage their keys
-   - perform actions
-3. Project Committer
-   - vote
-4. Viewer
-   - download
-   - vote with optional email
-   - view release events
-5. ASF Member
-   - view all events
-6. Admin (“root”)
-   - manage release
-   - manage metadata
-   - manage keys
-   - perform actions
-   - view all events
+| Activity   | PMC Member | Release Manager | Committer | Visiter | ASF Member | Admin
+| ---------- | ---------- | --------------- | --------- | ------- | ---------- | -----
+| binding vote | yes |  | | |  | 
+| vote         | yes |  | yes | yes | yes | 
+| manage release | yes | yes | | | | yes
+| manage policy | yes | yes | | | | yes
+| manage metadata | yes | yes | | | | yes
+| manage keys | yes | | | | | yes
+| manage own key | yes | yes | | | |
+| perform actions | yes | yes | | | | yes
+| view release events | yes | yes | yes | yes | yes | yes
+| view all events | | | | | yes | yes
 
-> The authorization and authentication for `GitHub PATs` will be specific and fine-grained. The details are to be developed during implementation.
+> To vote _visiters_ must provide PII and we'll need to assure that this is affirmatively agreed and revocable.
+
+> The authorization and authentication for `GitHub PATs` will be specific and fine-grained, but should be similar to a "release manager"
 
 ### Restful API
 
@@ -105,7 +123,7 @@ Multiple roles are possible and available actions are composed.
    - Vote Monitor
    - Distribute - Push to Package Repositories
    - Push / Pull with dist.apache.org
-   - <not an exhaustive list>
+   - others?
 
    See [Release Lifecycle](./lifecycle.md) for how Actions are chained together to perform a Release.
 
@@ -147,9 +165,7 @@ Multiple roles are possible and available actions are composed.
 1. Runner for processes taking more than a few seconds.
 2. Manages an array of concurrent tasks.
 3. Provides operational status.
-4. Horizontally scalable.
-5. Stateful tracking of tasks on disk w/backup in Datastore.
-6. Monitor load to avoid saturation and find true limits.
+4. Monitor load to avoid saturation and find true limits.
 
 ### Web Service
 
@@ -174,6 +190,6 @@ See [Release Lifecycle](./lifecycle.md) for how Action Tasks are chained togethe
    - Vote Monitor
    - Distribution
    - Monitor Manual Distribution
-   - CVE Process Monitor
    - Push / Pull with dist.apache.org
+   - others?
 
