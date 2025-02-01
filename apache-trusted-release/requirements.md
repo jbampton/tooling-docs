@@ -1,4 +1,4 @@
-# Requirements (DRAFT)
+# Requirements
 
 While reading consider these Notes:
 
@@ -33,7 +33,10 @@ While reading consider these Notes:
      - Manual triggers.
      - Tracking performance.
    - Platform includes a RESTful API.
-   - Simple addition of release metadata triggers automation.
+   - Make switching from current manual release process to a minimal ATR process very simple.
+   - Provide operational status to help Infra monitor ATR operations through the IRD.
+
+   See [Platform Services](./platform.md) for detailed requirements for the **ATR**.
 
 ## 4. Automate Release Process around Compliance
 
