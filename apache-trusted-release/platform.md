@@ -1,40 +1,37 @@
-# Platform
+# Platform Services
 
-https://releases.apache.org
-
-OR
-
-https://artifacts.apache.org
+1. Datastore: https://releases.apache.org
+2. Actions Runner: https://artifacts.apache.org
 
 ## Web Service
 
 1. `asfquart` based asynchronous python web service.
 2. Fronted by `httpd`.
    
-## Storage
+## Datastore
 
 1. Release Storage. A large filesystem with folders for each release's files. The release folder path is immutable.
 2. Metadata Database. An sql database on the server with the metadata schema.
 
-## Store metadata and files for Releases
+### Release Metadata and Files
 
 1. Current Releases
 2. Candidate Releases
 3. Revoked / EOL / Attic Releases
 4. “Nightlies” is it in or out of scope?
 
-## Store metadata and public signing keys of Release Managers
+### Release Manager Signing Keys
 
 1. Collate Keys by Committer
 2. Link Committer Keys to Signed Releases
 
-## Store metadata about Release CVEs
+### Release CVE Store
 
 1. CVE metadata
 2. Effected releases
 3. Release that resolves CV
 
-## Release co-ordinates
+### Release co-ordinates
 
 The co-ordinates make up the external path to objects. The metadata database provides the map to the local path.
 
@@ -49,24 +46,30 @@ The co-ordinates make up the external path to objects. The metadata database pro
 - Latest product release: `/<stage>/<project>/<product>/latest/<file>`
 - Product release by version: `/<stage>/<project>/<product>/<version>/<file>`
 
-## User Roles
+### User Roles
+
+Multiple roles are possible and available actions are composed.
 
 1. Project PMC Member
    - binding vote
    - manage release
    - manage metadata
-   - manage keys
-   - perform actions
-2. Project Committer
-   - vote
    - manage their keys
-3. Individual (“anonymous”, “none”)
+   - perform actions
+2. Release Manager
+   - manage release
+   - manage metadata
+   - manage their keys
+   - perform actions
+3. Project Committer
+   - vote
+4. Viewer
    - download
    - vote with optional email
    - view release events
-4. ASF Member
+5. ASF Member
    - view all events
-5. Admin (“root”)
+6. Admin (“root”)
    - manage release
    - manage metadata
    - manage keys
@@ -75,7 +78,7 @@ The co-ordinates make up the external path to objects. The metadata database pro
 
 > The authorization and authentication for `GitHub PATs` will be specific and fine-grained. The details are to be developed during implementation.
 
-## Restful API
+### Restful API
 
 1. GET/HEAD
    - Metadata
@@ -84,7 +87,7 @@ The co-ordinates make up the external path to objects. The metadata database pro
    - Signing keys
    - CVEs
 
-2. CRUD
+2. CRUD on 
    - Releases - Delete is not removal. It is a stage.
    - Public Signing Keys - Delete only if unused.
    - Votes - Store each vote in metadata.
@@ -103,7 +106,7 @@ The co-ordinates make up the external path to objects. The metadata database pro
      - Transitions
    - _Not an exhaustive list._
 
-## Web UI
+### Web UI
 
 1. Directory Pages
    - Project directory (_main page_)
@@ -129,3 +132,27 @@ The co-ordinates make up the external path to objects. The metadata database pro
 5. Page Template
    - Responsive with Header(Hamburger)/Content/Footer.
    - Include Search in Header(Hamburger)
+
+## Actions Runner
+
+1. Manages an array of active tasks
+2. Provides operational status
+
+### Restful API
+
+1. GET/HEAD
+   - Status
+   - Task
+
+2. CRUD on 
+   - Task 
+
+3. Task Types
+   - Analyze
+   - Test Distribution
+   - Vote Monitor
+   - Distribution
+   - Monitor Manual Distribution
+   - CVE Process Monitor
+   - Push / Pull with dist.apache.org
+
