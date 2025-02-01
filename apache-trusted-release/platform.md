@@ -3,6 +3,8 @@
 1. Datastore: https://releases.apache.org
 2. Task Runner: https://artifacts.apache.org
 
+> Willing to debate if the service stack split is necessary and start with a unitary monolith.
+
 ## Datastore
 
 1. Release Storage. A large filesystem with folders for each release's files. The release folder path is immutable.
@@ -12,8 +14,9 @@
 
 1. `asfquart` based asynchronous python web service.
 2. Fronted by `httpd`.
-3. Monolithic but fronted by a CDN.
-4. Avoid long running processes.
+3. Monolithic.
+4. Fronted by a CDN. The caching policies need to properly defined.
+5. Avoid long running processes.
    
 ### Release Metadata and Files
 
@@ -83,7 +86,7 @@ Multiple roles are possible and available actions are composed.
 
 ### Restful API
 
-1. GET/HEAD
+1. GET
    - Metadata
    - Release
    - Package files including SBOMs
@@ -158,7 +161,7 @@ Multiple roles are possible and available actions are composed.
 
 See [Release Lifecycle](./lifecycle.md) for how Action Tasks are chained together to perform tasks related to a Release.
 
-1. GET/HEAD
+1. GET
    - Status
    - Task
 
