@@ -69,7 +69,7 @@ flowchart TD
 **Sign Candidate**
 : Optionally sign packages using digital certificates through a service.
 
-**Distribute Test**
+**[Distribute Test](./test-distributions.md)**
 : Release Candidates may be distributed to Test repositories.
 
 **Release Vote**
@@ -84,7 +84,7 @@ flowchart TD
 **Release**
 : The release is a folder of files including metadata, SBOMs, public keys, signatures, and checksums.
 
-**Distribute**
+**[Distribute](./distributions.md)**
 : Release distribution will be automated for many channels.
 
 **Manual Distribution**
