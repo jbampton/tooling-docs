@@ -24,6 +24,8 @@ The team's website source will be developed here as well.
 - [Requirements (DRAFT)](apache-trusted-release/requirements.md)
 - [Platform Specification](apache-trusted-release/platform.md)
 - [Release Lifecycle](apache-trusted-release/lifecycle.md)
+  - [Distributions](apache-trusted-release/distributions.md)
+  - [Test Distributions](apache-trusted-release/test-distributions.md)
 
 ## Board Agenda Tool
 
