@@ -31,8 +31,8 @@
 ### Release CVE Store
 
 1. CVE metadata
-2. Effected releases
-3. Release that resolves CV
+3. Affected releases
+4. Release that resolves CVE(s)
 
 ### Release co-ordinates
 
