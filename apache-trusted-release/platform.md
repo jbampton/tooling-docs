@@ -20,7 +20,8 @@
 1. Current Releases
 2. Candidate Releases
 3. Revoked / EOL / Attic Releases
-4. “Nightlies” is it in or out of scope?
+
+> “Nightlies” is for a later phase.
 
 ### Release Manager Signing Keys
 
@@ -103,6 +104,8 @@ Multiple roles are possible and available actions are composed.
    - Push / Pull with dist.apache.org
    - <not an exhaustive list>
 
+   See [Release Lifecycle](./lifecycle.md) for how Actions are chained together to perform a Release.
+
 4. POST Templated Release Emails
    - Announcements
    - Votes
@@ -152,6 +155,8 @@ Multiple roles are possible and available actions are composed.
 3. Limit web access to ATR Datastore, other Runners, and IRD.
 
 ### Restful API
+
+See [Release Lifecycle](./lifecycle.md) for how Action Tasks are chained together to perform tasks related to a Release.
 
 1. GET/HEAD
    - Status
