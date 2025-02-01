@@ -1,18 +1,20 @@
 # Platform Services
 
 1. Datastore: https://releases.apache.org
-2. Actions Runner: https://artifacts.apache.org
+2. Task Runner: https://artifacts.apache.org
 
-## Web Service
-
-1. `asfquart` based asynchronous python web service.
-2. Fronted by `httpd`.
-   
 ## Datastore
 
 1. Release Storage. A large filesystem with folders for each release's files. The release folder path is immutable.
 2. Metadata Database. An sql database on the server with the metadata schema.
 
+### Web Service
+
+1. `asfquart` based asynchronous python web service.
+2. Fronted by `httpd`.
+3. Monolithic but fronted by a CDN.
+4. Avoid long running processes.
+   
 ### Release Metadata and Files
 
 1. Current Releases
@@ -94,17 +96,18 @@ Multiple roles are possible and available actions are composed.
    - SBOMs - Special files stored in the release folder.
    - CVEs - CVE metadata and release linkage.
 
-3. Asynchronous Actions - several transformative actions as POST/PUT/GET
+3. POST Actions - Transitions with a Task
    - Analyze
-   - Vote
+   - Vote Monitor
    - Distribute - Push to Package Repositories
-   - Stage transitions
    - Push / Pull with dist.apache.org
-   - Emails
-     - Votes
-     - Status
-     - Transitions
-   - _Not an exhaustive list._
+   - <not an exhaustive list>
+
+4. POST Templated Release Emails
+   - Announcements
+   - Votes
+   - Status
+   - Transitions
 
 ### Web UI
 
@@ -133,10 +136,20 @@ Multiple roles are possible and available actions are composed.
    - Responsive with Header(Hamburger)/Content/Footer.
    - Include Search in Header(Hamburger)
 
-## Actions Runner
+## Task Runner
 
-1. Manages an array of active tasks
-2. Provides operational status
+1. Runner for processes taking more than a few seconds.
+2. Manages an array of concurrent tasks.
+3. Provides operational status.
+4. Horizontally scalable.
+5. Stateful tracking of tasks on disk w/backup in Datastore.
+6. Monitor load to avoid saturation and find true limits.
+
+### Web Service
+
+1. `asfquart` based asynchronous python web service.
+2. Fronted by `httpd`.
+3. Limit web access to ATR Datastore, other Runners, and IRD.
 
 ### Restful API
 
