@@ -10,14 +10,14 @@ Projects are run by a PMC with members and committers, have metadata, vote polic
 
 1. Key
 2. Project Name
-3. Version String
+3. Version
 9. Products
 4. User role lists:
    - PMC Members
    - Committers
    - Release Managers
 5. Public Signing Keys
-8. Vote Policy Settings
+8. Vote Policy
 9. CVEs
 10. Release lists:
     - Candidates
@@ -29,9 +29,10 @@ Projects are run by a PMC with members and committers, have metadata, vote polic
 Zero or more products with separate releases from the main one. A product may override vote policy settings.
 
 1. Key
-2. Product Name
-3. Version String
-8. Vote Policy Settings
+2. Project
+3. Product Name
+4. Version
+8. Vote Policy
 9. CVEs
 10. Release lists:
     - Candidates
@@ -47,7 +48,7 @@ Public Signing Keys are stored using the User id of the owner as the key. When a
 3. Type
 4. Expiration
 
-### Vote Policy Settings
+### Vote Policy
 
 These are a set of choices which control how a release vote is conducted by the ATR. 
 
@@ -79,10 +80,14 @@ Currrent releases have initial phases to distribute and announce the release.
 1. Storage key
 2. Stage
 3. Phase
-3. Version String
-4. CVEs
-3. Packages - List of triples of file, signature, and checksum that are the downloadable components of a release.
+4. Project
+5. Product
+3. Version
+4. Packages - List of triples of file, signature, and checksum that are the downloadable components of a release.
+   > Should we use Artifacts instead of Packages?
 6. SBOMs - in an acceptable SBOM format and maintained in Phases using standard python libraries.
+7. CVEs
+8. Vote Policy
 5. Votes
    - Pass or Fail
    - Summary
