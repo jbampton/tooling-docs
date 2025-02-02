@@ -29,7 +29,7 @@
 ### Release Manager Signing Keys
 
 1. Collate Keys by Committer
-2. Link Committer Keys to Signed Releases
+2. Link Committer Keys to Project, Signed Releases
 
 ### Release CVE Store
 
@@ -51,56 +51,6 @@ The co-ordinates make up the external path to objects. The metadata database pro
 - Main product by version: `/<stage>/<project>/<version>/<file>`
 - Latest product release: `/<stage>/<project>/<product>/latest/<file>`
 - Product release by version: `/<stage>/<project>/<product>/<version>/<file>`
-
-### Data Model
-
-Here is an introduction to the ATR's data model.
-
-> The following needs some work, but I wanted to have nomenclature for discussion.
-
-#### Projects.
-
-Projects are run by a PMC with members and committers, have metadata, vote policy settings, and products.
-
-4. **Products**. Zero or more products with separate releases from the main one. A product may override vote policy settings.
-3. **Public Signing Keys**. Release Managers have signing keys that are applied to all of packages in a release.
-2. **Release Manager**. One or more Release Managers who may sign the release packages.
-1. **Vote Policy Settings**. These are a set of choices which control how a release vote is conducted by the ATR. 
-
-Products that are not the main one have metadata, separate releases, and vote policy settings.
-   
-#### Releases
-
-Releases have stage and state, packages, votes and vote policy, cves both impacted and solved, and metadata.
-A release may override vote policy settings. The vote policy settings and signing keys used become release metadata.
-
-7. **CVEs**. For each release there are zero or more CVEs that impact this release. There may be CVEs that are solved this release.
-3. **Packages**. One or more triples of file, signature, and checksum that is a downloadable component of a release.
-6. **SBOMs**. Are in one or more acceptable SBOM formats and should be maintained using standard python libraries.
-1. **Stage**. A release is in one of three stages: Candidate, Current, or Revoked.
-2. **State**. A release state is either "at rest" or is performing a task in the release lifecycle.
-5. **Votes**. A release Vote is a monitored task of email communication and vote recording. Vote policy choices will provide choices.
-
-#### User Roles
-
-Multiple roles are possible and available actions are composed.
-
-| Activity   | PMC Member | Release Manager | Committer | Visiter | ASF Member | Admin
-| ---------- | ---------- | --------------- | --------- | ------- | ---------- | -----
-| binding vote | yes |  | | |  | 
-| vote         | yes |  | yes | yes | yes | 
-| manage release | yes | yes | | | | yes
-| manage policy | yes | yes | | | | yes
-| manage metadata | yes | yes | | | | yes
-| manage keys | yes | | | | | yes
-| manage own key | yes | yes | | | |
-| perform actions | yes | yes | | | | yes
-| view release events | yes | yes | yes | yes | yes | yes
-| view all events | | | | | yes | yes
-
-> To vote _visiters_ must provide PII and we'll need to assure that this is affirmatively agreed and revocable.
-
-> The authorization and authentication for `GitHub PATs` will be specific and fine-grained, but should be similar to a "release manager"
 
 ### Restful API
 
