@@ -7,6 +7,8 @@ https://releases.apache.org
 1. Release Storage. A large filesystem with folders for each release's files. The release folder path is immutable.
 2. Metadata Database. An sql database on the server with the metadata schema.
 
+See [Data Model](./data-model.md) for a discussion of the objects managed by the ATR.
+
 ## Web Service
 
 1. `asfquart` based asynchronous python web service.
@@ -23,10 +25,9 @@ https://releases.apache.org
 
 > “Nightlies” is for a later phase.
 
-### Release Manager Signing Keys
+### Release Phases
 
-1. Collate Keys by Committer
-2. Link Committer Keys to Project, Signed Releases
+See [Release Lifecycle](./lifecycle.md) for how phases are chained together to perform a Release.
 
 ### Release CVEs
 
