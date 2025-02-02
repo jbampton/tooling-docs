@@ -3,7 +3,7 @@
 A Release will go through a lifecycle of **stages** and **phases**.
 
 Stages include **Build**, **Candidate**, **Current**, and **Revoked**.
-The ATR does not manage build stage releases. It takes over on the transition from the build to the cnadidate stage.
+The ATR does not manage build stage releases. It takes over on the transition from the build to the candidate stage.
 Stages control where on the **ATR** Website a release can be found.
 
 Phases are states or activities during a Release's life cycle.
