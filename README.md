@@ -25,8 +25,7 @@ The team's website source will be developed here as well.
 - [Platform Services](apache-trusted-release/platform.md)
 - [Data Model](apache-trusted-release/data-model.md)
 - [Release Lifecycle Phases](apache-trusted-release/lifecycle.md)
-  - [Test Distributions](apache-trusted-release/test-distributions.md)
-  - [Distributions](apache-trusted-release/distributions.md)
+- [Page index](apache-trusted-release)
 
 ## Board Agenda Tool (BAT)
 
