@@ -1,4 +1,4 @@
-# Sign Packages Phase
+# Sign Candidate Phase
 
 For certain package types in a release the PMC wishes to add Digital Signatures using approved and current services.
 
