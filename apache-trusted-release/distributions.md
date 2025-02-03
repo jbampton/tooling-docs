@@ -1,8 +1,8 @@
-# Distributions Phase
+# Distribute Phase
 
 Support will be added to the ATR for distribution of release packages to third parties in a priority order.
 
-## Distributors
+## Package Managers
 
 1. Maven Central
 2. PyPi
