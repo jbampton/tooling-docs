@@ -1,8 +1,8 @@
-# Test Distributions Phase
+# Test Distribute Phase
 
 Support will be added to the ATR for distribution of release candidate packages in a priority order.
 
-## Distributors
+## Package Managers
 
 1. Maven - repository.apache.org
 2. TEST PyPi
