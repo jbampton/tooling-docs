@@ -4,13 +4,13 @@ Here is an introduction to the ATR's data model.
 
 > The view here is descriptive of a json model, but the implementation will be a combination of filesytem files and subdirs along with an SQLite database schema.
 
-## Projects
+## PMCs
 
-Projects are run by a PMC with members and committers, have metadata, vote policy settings, and products.
+Projects are run by a PMC with members and committers, have metadata, vote policy settings, and product lines.
 
 1. Key
 2. Project Name
-9. Products
+9. Product Lines
 4. User role lists:
    - PMC Members
    - Committers
@@ -18,14 +18,15 @@ Projects are run by a PMC with members and committers, have metadata, vote polic
 5. Public Signing Keys
 8. Vote Policy
 
-### Products
+### Product Lines
 
-One or more products with separate releases including the main one. A product may override project vote policy.
+One or more product lines with separate releases including the main one. A product line may override pmc vote policy.
 
 1. Key
-2. Project
+2. PMC
 3. Product Name
 4. Latest Version
+5. Package Managers
 8. Vote Policy
 9. CVEs
 10. Release lists:
@@ -61,8 +62,8 @@ CVEs are can be stored by id and are associated to other objects through lists. 
 1. ID
 2. Date
 3. Title
-4. Projects
-5. Products
+4. PMCs
+5. Product Lines
 6. Releases
 
 ## Releases
@@ -74,8 +75,9 @@ Currrent releases have initial phases to distribute and announce the release.
 1. Storage key
 2. Stage
 3. Phase
-4. Project
-5. Product
+4. PMC
+5. Product Line
+6. Package Managers
 3. Version
 5. Packages - List of triples of file, signature, and checksum that are the downloadable components of a release.
    > Should we use Artifacts instead of Packages?
@@ -90,11 +92,23 @@ Currrent releases have initial phases to distribute and announce the release.
    - Start
    - End
 
+## Package Managers
+
+Package managers where PMCs distribute release packages. These need to be defined in the ATR.
+Package managers may be for test packages. Package Managers will be automated over time.
+
+1. Name
+2. Key
+3. URL
+4. Credentials
+5. Is Test?
+6. Automation endpoint
+
 ## User Roles
 
 Multiple roles are possible and available actions are composed.
 
-| Activity   | PMC Member | Release Manager | Committer | Visitor | ASF Member | Admin
+| Activity   | PMC Member | Release Manager | Committer | Visitor | ASF Member | SysAdmin
 | ---------- | ---------- | --------------- | --------- | ------- | ---------- | -----
 | binding vote | yes |  | | |  | 
 | vote         | yes | yes | yes | yes | yes | 
@@ -103,6 +117,7 @@ Multiple roles are possible and available actions are composed.
 | product admin | yes | | | | | yes
 | manage key | yes | yes | | | |
 | run phase | yes | yes | | | | yes
+| distribution admin | | | | | | yes
 | view release events | yes | yes | yes | yes | yes | yes
 | view project events | yes | yes | yes | yes | yes | yes
 | search all events | | | | | yes | yes
