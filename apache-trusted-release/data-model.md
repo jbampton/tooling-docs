@@ -94,7 +94,7 @@ Currrent releases have initial phases to distribute and announce the release.
 
 Multiple roles are possible and available actions are composed.
 
-| Activity   | PMC Member | Release Manager | Committer | Visiter | ASF Member | Admin
+| Activity   | PMC Member | Release Manager | Committer | Visitor | ASF Member | Admin
 | ---------- | ---------- | --------------- | --------- | ------- | ---------- | -----
 | binding vote | yes |  | | |  | 
 | vote         | yes | yes | yes | yes | yes | 
@@ -107,6 +107,6 @@ Multiple roles are possible and available actions are composed.
 | view project events | yes | yes | yes | yes | yes | yes
 | search all events | | | | | yes | yes
 
-> To vote _visiters_ must provide PII and we'll need to assure that this is affirmatively agreed and sef-revocable.
+> To vote _visitors_ must provide PII and we'll need to assure that this is affirmatively agreed and sef-revocable.
 
 > The authorization and authentication for `GitHub PATs` will be specific and fine-grained, but should be similar to a "release manager"
