@@ -67,7 +67,7 @@ flowchart TD
 **Announce Release**
 : Send a compliant announcement of the release. This template will include release metadata.
 
-**ATR Platform**
+**[ATR Platform](./platform.md)**
 : Apache Trusted Release is a service with a web UI and restful API for managing the lifecycle of project releases.
 
 **Current SVN Build Process**
@@ -80,19 +80,20 @@ flowchart TD
 : Release Candidates may be distributed to Test repositories.
 
 **Distribution Failed**
-: A Release may fail one or more of its Distribution Steps. This may be due to a problem with the destination. The project will need to manually retry. The distributions steps should include reasonable retry logic.
+: A Release may fail one or more of its Distribution Steps. This may be due to a problem with the destination. The project will need to manually retry. The distribute steps should include reasonable retry logic. The Release Manager will need to decide the next phase.
 
-**Evaluate Candidate**
+**[Evaluate Candidate](./evaluate.md)**
 : Report on the Candidate by performing numerous checks for policy compliance. Fails if compliance minimums are unmet.
 
 **Failed**
 : A Release Candidate may end in this state. The project can either abandon it or update and resubmit it.
+ The Release Manager will need to decide the next phase.
 
 **GHA Secure Release Process**
 : In a GitHub workflow the release candidate is built and validated following the Security Release Policy.
 
 **Manual Distribution**
-: Some channels either require manual steps, or they are yet to be automated.
+: Some channels either require manual steps, or they are yet to be automated. An email will be sent to list which package managers need a manual ditribution. Once that is complete the Release Manager will need to move to the next Phase.
 
 **Passes**
 : The Release Candidate has been accepted. Convert the candidate into a Release and proceed to Distribute and Announce the Release.
@@ -103,14 +104,14 @@ flowchart TD
 **Release Candidate**
 : A release candidate consists of a folder of release files including metadata, SBOMs, public keys, signatures, and checksums.
 
-**Release Vote**
+**[Release Vote](./vote.md)**
 : Release policy requires a Vote on the project's dev list. The ATR records votes in the platform and also on the mailing list. The Vote will be summarized and the PMC Vote recorded in the releases metadata.
 
 **Released**
-: Once the Release is distributed and announced, this Release should remain in this state as long as it is available.
+: Once the Release is distributed and announced, this Release should remain in this phase as long as it is available.
 
 **Revoked**
-: A Release in this state has been revoked or abandoned.
+: A Release in this stage/phase has been archived, revoked, or abandoned.
 
-**Sign Candidate**
+**[Sign Candidate](./digital-signatures.md)**
 : Optionally sign packages using digital certificates through a service.
