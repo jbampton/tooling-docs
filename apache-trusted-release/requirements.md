@@ -10,12 +10,12 @@ While reading consider these Notes:
    - Minimize human interaction.
    - Community participation on **Release Votes** remains via email.
    - Record all of the key events for tracking operations and performance.
-   - Projects can quickly benefit.
+   - PMCs can quickly benefit.
    - Infra costs and management complexity are decreased.
 
 ## 2. Community
 
-   - Work with a selection of **Apache** projects and **Infra** for **User Acceptance Testing (UAT)**.
+   - Work with a selection of **Apache** PMCs and **Infra** for **User Acceptance Testing (UAT)**.
    - Co-ordinate with **Infra** on roles and responsibility on this complex stack.
    - Assure that the **ATR platform** follows industry best practices especially regarding **SBOMs** and **Certificate Management**.
    - Help lead the industry to better practices.
@@ -23,11 +23,11 @@ While reading consider these Notes:
 
 ## 3. Apache Trusted Release Platform (ATR)
 
-   - Incorporate all Project Releases.
+   - Incorporate all PMC Releases.
      - Download page. (migrated/mirrored from dist/release)
      - Release Candidate pages. (migrated/mirrored from dist/dev)
      - Archived download page. (migrated from archives)
-   - Every project has a management interface.
+   - Every PMC has a management interface.
      - Current manual release practice is viewable.
      - Automated release status.
      - **KEYS** file management including revoking keys.
