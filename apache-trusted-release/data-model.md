@@ -10,7 +10,6 @@ Projects are run by a PMC with members and committers, have metadata, vote polic
 
 1. Key
 2. Project Name
-3. Version
 9. Products
 4. User role lists:
    - PMC Members
@@ -18,20 +17,15 @@ Projects are run by a PMC with members and committers, have metadata, vote polic
    - Release Managers
 5. Public Signing Keys
 8. Vote Policy
-9. CVEs
-10. Release lists:
-    - Candidates
-    - Current
-    - Revoked
 
 ### Products
 
-Zero or more products with separate releases from the main one. A product may override vote policy settings.
+One or more products with separate releases including the main one. A product may override project vote policy.
 
 1. Key
 2. Project
 3. Product Name
-4. Version
+4. Latest Version
 8. Vote Policy
 9. CVEs
 10. Release lists:
@@ -62,7 +56,7 @@ These are a set of choices which control how a release vote is conducted by the 
 
 ### CVEs
 
-CVEs are can be stored by id and are associated to other objects through lists.
+CVEs are can be stored by id and are associated to other objects through lists. How this data is best structured needs a discussion with the Security Team.
 
 1. ID
 2. Date
@@ -83,7 +77,7 @@ Currrent releases have initial phases to distribute and announce the release.
 4. Project
 5. Product
 3. Version
-4. Packages - List of triples of file, signature, and checksum that are the downloadable components of a release.
+5. Packages - List of triples of file, signature, and checksum that are the downloadable components of a release.
    > Should we use Artifacts instead of Packages?
 6. SBOMs - in an acceptable SBOM format and maintained in Phases using standard python libraries.
 7. CVEs
@@ -104,15 +98,15 @@ Multiple roles are possible and available actions are composed.
 | ---------- | ---------- | --------------- | --------- | ------- | ---------- | -----
 | binding vote | yes |  | | |  | 
 | vote         | yes | yes | yes | yes | yes | 
-| manage release | yes | yes | | | | yes
-| manage policy | yes | yes | | | | yes
-| manage metadata | yes | yes | | | | yes
-| manage keys | yes | | | | | yes
-| manage own key | yes | yes | | | |
-| perform actions | yes | yes | | | | yes
+| release admin | yes | yes | | | | yes
+| project admin | yes | | | | | yes
+| product admin | yes | | | | | yes
+| manage key | yes | yes | | | |
+| run phase | yes | yes | | | | yes
 | view release events | yes | yes | yes | yes | yes | yes
-| view all events | | | | | yes | yes
+| view project events | yes | yes | yes | yes | yes | yes
+| search all events | | | | | yes | yes
 
-> To vote _visiters_ must provide PII and we'll need to assure that this is affirmatively agreed and revocable.
+> To vote _visiters_ must provide PII and we'll need to assure that this is affirmatively agreed and sef-revocable.
 
 > The authorization and authentication for `GitHub PATs` will be specific and fine-grained, but should be similar to a "release manager"
