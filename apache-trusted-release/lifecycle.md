@@ -27,7 +27,7 @@ flowchart TD
     D -->|pass| DD
     GG@{ shape: processes, label: "Distribute (Test)" }
     E@{ shape: sl-rect, label: "Release Vote" }
-    JJJ@{ shape: dbl-circ, label: "Passes" }
+    JJJ@{ shape: circ, label: "Passes" }
     F@{ shape: dbl-circ, label: "Failed" }
     E -->|pass| JJJ
     E -->|fail| F
@@ -37,28 +37,25 @@ flowchart TD
     DD --> GG
     GG --> E
     end
+    II[Migration]
     subgraph Current Release Stage
     JJ@{ shape: docs, label: "Release" }
     JJJ --> JJ
     G@{ shape: processes, label: "Distribute" }
     G --> I
     I[Announce Release]
-    II[Migration]
-    L@{ shape: trap-t, label: "Update SBOMs" }
-    J@{ shape: dbl-circ, label: "Released" }
-    J -->|cves| L
-    L -->|record cves| J
     JJ --> G
-    I --> J
+    J@{ shape: dbl-circ, label: "Released" }
+    I -->|announced| J
+    end
     B -->|migration| II
     II -->|current| J
     subgraph Archived Release Stage
     K@{ shape: dbl-circ, label: "Archived" }
     end
     G -->|failure| K
-    II -->|archived| K
     J -->|archive| K
-    end
+    II -->|archived| K
     end
 ```
 
@@ -110,8 +107,3 @@ Once that is complete the Release Manager will need to move to the next Phase. I
 
 **[Sign Candidate](./digital-signatures.md)**
 : Optionally sign packages using digital certificates through a service.
-
-**[Update SBOMs](./cve-process.md)**
-: At some moment as or after a release happens a project may announce CVEs that either impact or are solved by a release. The security team and PMC manage CVEs including announcements and publishing via cveprocess.apache.org The ATR will update the releases SBOMs with new CVEs.
-
-> Note where this is an explicit phase or not depends on integration discussions with the security team.
