@@ -16,10 +16,12 @@ While reading consider these Notes:
 ## 2. Community
 
    - Work with a selection of **Apache** PMCs and **Infra** for **User Acceptance Testing (UAT)**.
-   - Co-ordinate with **Infra** on roles and responsibility on this complex stack.
+   - Co-ordinate with **Infra** on migration to and operating this complex stack.
+   - Contribute to Infra's **asfquart** and **asfpy** frameworks when the code belongs there.
+   - Provide openings for volunteers to help so long as the contributions are adequate and timely.
    - Assure that the **ATR platform** follows industry best practices especially regarding **SBOMs** and **Certificate Management**.
    - Help lead the industry to better practices.
-   - If necessary, work within the **ASF** on **Release Policy** improvements. 
+   - Work within the **ASF** on **Release Policy** improvements. 
 
 ## 3. Apache Trusted Release Platform (ATR)
 
@@ -36,7 +38,7 @@ While reading consider these Notes:
    - Platform includes a RESTful API.
    - Platform perfers to serve static content.
    - Make switching from current manual release process to a minimal ATR process very simple.
-   - Provide operational status to help Infra monitor ATR operations through the IRD.
+   - Provide operational status to help Infra monitor ATR operations through the Infra Reporting Dashboard (IRD).
 
    See [Platform Services](./platform.md) for detailed requirements for the **ATR**.
 
