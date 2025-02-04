@@ -1,4 +1,4 @@
-# Security Advisory Process "Phase"
+# Security Advisory Process
 
 When security advisories are announced there needs to be co-ordination between Security tooling such as cveprocess.apache.org and the ATR.
 
