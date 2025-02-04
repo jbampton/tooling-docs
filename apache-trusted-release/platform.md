@@ -30,13 +30,6 @@ See [Data Model](./data-model.md) for a discussion of the objects managed by the
 
 See [Release Lifecycle](./lifecycle.md) for how phases are chained together to perform a Release.
 
-### Release CVEs
-
-1. CVE metadata
-2. SBOM updates
-3. Affected releases
-4. Release that resolves CVE(s)
-
 ### Release co-ordinates
 
 The co-ordinates make up the external path to objects. The metadata database provides the map to the local path.
@@ -59,14 +52,12 @@ The co-ordinates make up the external path to objects. The metadata database pro
    - Release
    - Package files including SBOMs
    - Signing keys
-   - CVEs
 
 2. CRUD on 
    - Releases - Delete is not removal. It is a stage.
    - Public Signing Keys - Delete only if unused.
    - Votes - Store each vote in metadata.
    - SBOMs - Special files stored in the release folder.
-   - CVEs - CVE metadata and release linkage.
 
 3. POST Phases - Transitions, Activities, and Communication
    - Transition into Phase.
@@ -90,7 +81,6 @@ The co-ordinates make up the external path to objects. The metadata database pro
 2. Release Page
    - Changes according to Stage and Role.
    - Release level metadata
-   - CVE metadata
    - Download package from directory of release
    - Maintenance actions
    - History of events
