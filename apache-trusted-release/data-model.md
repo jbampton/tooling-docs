@@ -28,8 +28,7 @@ One or more product lines with separate releases including the main one. A produ
 4. Latest Version
 5. Package Managers
 8. Vote Policy
-9. CVEs
-10. Release lists:
+9. Release lists:
     - Candidates
     - Current
     - Archived
@@ -55,17 +54,6 @@ These are a set of choices which control how a release vote is conducted by the 
 6. Pause for RM check if any -1 votes flag - normally when the vote passes we proceed to the next steps,
    but we should allow the RM a chance to confirm if a -1 vote should stop the release.
 
-### CVEs
-
-CVEs are can be stored by id and are associated to other objects through lists. How this data is best structured needs a discussion with the Security Team.
-
-1. ID
-2. Date
-3. Title
-4. PMCs
-5. Product Lines
-6. Releases
-
 ## Releases
 
 Releases are related groups of packages. Candidate releases go through stages and these have phases.
@@ -82,7 +70,6 @@ Currrent releases have initial phases to distribute and announce the release.
 5. Packages - List of triples of file, signature, and checksum that are the downloadable components of a release.
    > Should we use Artifacts instead of Packages?
 6. SBOMs - in an acceptable SBOM format and maintained in Phases using standard python libraries.
-7. CVEs
 8. Vote Policy
 5. Votes
    - Pass or Fail
