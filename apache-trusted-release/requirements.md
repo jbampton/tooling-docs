@@ -66,4 +66,3 @@ While reading consider these Notes:
 ## 7. Future Requirements
 
    - Integrate with the [Security Advisory Process](advisory-process.md) to make it easy to track applicable advisories on download pages.
-   - Tracking of CVEs in the ATR.
