@@ -34,7 +34,7 @@ While reading consider these Notes:
      - Manual triggers.
      - Tracking performance.
    - Platform includes a RESTful API.
-   - Work with Security Team about integration of CVE information.
+   - Platform perfers to serve static content.
    - Make switching from current manual release process to a minimal ATR process very simple.
    - Provide operational status to help Infra monitor ATR operations through the IRD.
 
@@ -49,7 +49,6 @@ While reading consider these Notes:
    - SBOMs and Attestations
      - Include dependency and license compliance.
      - Provide clear attribution and information about Release Votes.
-   - CVEs
    - Certificate and Credential Management
      - Manage the signing keys needed for automation.
    - Download Page including available SBOM and verification instructions.
@@ -63,3 +62,8 @@ While reading consider these Notes:
 
    - Retire dist.apache.org svn repository once all 200+ PMCs having fully switched over to directly using the **ATR**.
    - Map legacy urls for https://dist.apache.org, https://download.apache.org, and https://archive.apache.org to https://releases.apache.org
+
+## 7. Future Requirements
+
+   - Integrate with the [Security Advisory Process](advisory-process.md) to make it easy to track applicable advisories on download pages.
+   - Tracking of CVEs in the ATR.
