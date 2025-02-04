@@ -59,3 +59,7 @@ While reading consider these Notes:
 
    Here is a flow chart showing the [Release Lifecycle Phases](lifecycle.md).
 
+## 6. Additional Requirements
+
+   - Retire dist.apache.org svn repository once all 200+ PMCs having fully switched over to directly using the **ATR**.
+   - Map legacy urls for https://dist.apache.org, https://download.apache.org, and https://archive.apache.org to https://releases.apache.org
