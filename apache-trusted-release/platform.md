@@ -13,9 +13,14 @@ See [Data Model](./data-model.md) for a discussion of the objects managed by the
 
 1. `asfquart` based asynchronous python web service.
 2. Fronted by `httpd`.
-3. Monolithic.
-4. Fronted by a CDN. The caching policies need to properly defined.
-5. Avoid long running processes.
+3. Static content should be served without going through Python stack.
+4. Monolithic.
+5. Fronted by a CDN. The caching policies need to properly defined.
+
+## Legacy Redirect Rules
+
+1. Redirect from https://downloads.apache.org
+2. Redirect from https://archives.apache.org
    
 ### Release Stages
 
