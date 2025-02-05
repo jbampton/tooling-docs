@@ -13,7 +13,7 @@ See [Data Model](./data-model.md) for a discussion of the objects managed by the
 
 1. `asfquart` based asynchronous python web service.
 2. Fronted by `httpd`.
-3. Static content should be served without going through Python stack.
+3. Static content may be served without going through `asfquart`.
 4. Monolithic.
 5. Fronted by a CDN. The caching policies need to properly defined.
 
