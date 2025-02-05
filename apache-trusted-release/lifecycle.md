@@ -12,16 +12,18 @@ Phases are states or activities during a Release's life cycle.
 flowchart TD
     subgraph Build Stage
     A[GHA Secure Build]
+    BB[RM Local Build]
     end
     subgraph Legacy
     B[Legacy SVN Dist]
     end
     subgraph Apache Trusted Release
     C@{ shape: docs, label: "Release Candidate" }
-    A -->|automatically triggered| C
-    B -->|manually triggered| C
+    A -->|gha to api| C
+    BB -->|api or web page| C
+    B -->|web page| C
     subgraph Release Candidate Stage
-    D@{ shape: processes, label: "Evaluate Candidate" }
+    D@{ shape: processes, label: "Evaluate Claims" }
     C --> D
     DD@{ shape: process, label: "Sign Candidate" }
     D -->|pass| DD
@@ -74,8 +76,8 @@ flowchart TD
 : Release and Test distributions will be automated for many channels. An email will be sent about package managers need which need manual distribution.
 Once that is complete the Release Manager will need to move to the next Phase. If all distributions automatically complete then moving to the next phase is automatic,
 
-**[Evaluate Candidate](./evaluate.md)**
-: Report on the Candidate by performing numerous checks for policy compliance. Fails if compliance minimums are unmet.
+**[Evaluate Claims](./evaluate.md)**
+: Evaluate claims on the Candidate by performing numerous checks for policy compliance. Fails if compliance minimums are unmet.
 
 **Failed**
 : A Release Candidate may end in this state. The project can either abandon it or update and resubmit it.
@@ -104,6 +106,9 @@ Once that is complete the Release Manager will need to move to the next Phase. I
 
 **Released**
 : Once the Release is distributed and announced, this Release should remain in this phase as long as it is available.
+
+**[RM Local Build](./data-model.md)**
+: Release Managers upload or push a release candidate into the ATR.
 
 **[Sign Candidate](./digital-signatures.md)**
 : Optionally sign packages using digital certificates through a service.
