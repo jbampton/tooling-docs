@@ -107,8 +107,8 @@ Once that is complete the Release Manager will need to move to the next Phase. I
 **Released**
 : Once the Release is distributed and announced, this Release should remain in this phase as long as it is available.
 
-**[RM Local Build](./data-model.md)**
-: Release Managers upload or push a release candidate into the ATR.
+**[RM Local Build](./platform.md)**
+: Release Managers upload or push a release candidate into the ATR using either an api or a web page.
 
 **[Sign Candidate](./digital-signatures.md)**
 : Optionally sign packages using digital certificates through a service.
