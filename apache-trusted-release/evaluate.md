@@ -6,6 +6,7 @@ In this phase the ATR will check claims about the release artifacts to enforce p
 
 - [Proper application of license](https://www.apache.org/legal/apply-license.html)
 - [Release Policy](https://www.apache.org/legal/release-policy.html)
+- [Signing Releases](https://infra.apache.org/release-signing.html)
 - [Source Header and Copyright Notice Policy](https://apache.org/legal/src-headers.html)
 - [3rd Party License Policy](https://apache.org/legal/resolved.html)
 
