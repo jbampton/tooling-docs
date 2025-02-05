@@ -8,13 +8,13 @@ We have three types of Releases to create using a "Pull from 'Dist'" process.
 
 3. Archived Releases which are migrated from the archive if not present in the Current Releases.
 
-## PMC Release Management Page
+## PMC Management Page
 
 1. **Create Release Candidate** - upload the packages for a release candidate from `svn:dist/dev`
 
 2. **Legacy Release** - upload an approved release from `svn:dist/release`.
 
-## System Administation Management Page
+## System Admin Page
 
 1. **Synchronise Current Releases** - scan `svn:dist/release` and migrate any not in the ATR.
 
