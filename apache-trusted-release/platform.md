@@ -84,22 +84,24 @@ The co-ordinates make up the external path to objects. The metadata database pro
    - Project release directory
 
 2. Release Page
-   - Changes according to Stage and Role.
+   - Static public version for Current and Archived Stages.
+   - Overwise dyanmic for Candidate stage and when accessed from the PMC Management Page. 
    - Release level metadata
    - Download package from directory of release
    - Maintenance actions
    - History of events
 
-3. Project Configuration Page
-   - Project level metadata and releases
+4. PMC Management Page
+   - PMC level metadata and releases
    - Product level metadata and releases
+   - Manage releases
 
-4. Audit Page
+5. Audit Page
    - ASF event history
    - Project event history
    - Product event history
 
-5. Page Template
+6. Page Template
    - Responsive with Header(Hamburger)/Content/Footer.
    - Include Search in Header(Hamburger)
 
