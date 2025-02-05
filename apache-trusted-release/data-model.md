@@ -26,7 +26,7 @@ One or more product lines with separate releases including the main one. A produ
 2. PMC
 3. Product Name
 4. Latest Version
-5. Package Managers
+5. Distribution Channels
 8. Vote Policy
 9. Release lists:
     - Candidates
@@ -79,10 +79,10 @@ Currrent releases have initial phases to distribute and announce the release.
    - Start
    - End
 
-## Package Managers
+## Distribution Channels
 
-Package managers where PMCs distribute release packages. These need to be defined in the ATR.
-Package managers may be for test packages. Package Managers will be automated over time.
+Distribution channels are where PMCs distribute release packages. These need to be defined in the ATR.
+Distribution channels may be for test packages. Package Managers will be automated over time.
 
 1. Name
 2. Key
@@ -104,7 +104,7 @@ Multiple roles are possible and available actions are composed.
 | product admin | yes | | | | | yes
 | manage key | yes | yes | | | |
 | run phase | yes | yes | | | | yes
-| distribution admin | | | | | | yes
+| channel admin | | | | | | yes
 | view release events | yes | yes | yes | yes | yes | yes
 | view project events | yes | yes | yes | yes | yes | yes
 | search all events | | | | | yes | yes
