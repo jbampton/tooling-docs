@@ -85,7 +85,7 @@ The co-ordinates make up the external path to objects. The metadata database pro
 
 2. Release Page
    - Static public version for Current and Archived Stages.
-   - Overwise dyanmic for Candidate stage and when accessed from the PMC Management Page. 
+   - Otherwise dynamic for Candidate Stage and when accessed from the PMC Management Page. 
    - Release level metadata
    - Download package from directory of release
    - Maintenance actions
