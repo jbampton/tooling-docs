@@ -8,6 +8,7 @@ The ATR should take over repsonsibility from the Release Manager for running a V
 - [Voting](https://www.apache.org/foundation/voting.html)
 - [Release Votes](https://www.apache.org/foundation/voting.html#ReleaseVotes)
 - [Majority Approval](https://www.apache.org/foundation/glossary.html#MajorityApproval)
+- [Incubation Releases](https://incubator.apache.org/policy/incubation.html#releases)
 
 ## Vote Policy
 
@@ -28,3 +29,4 @@ The are reasonable adjustments that a PMC can apply to a release vote.
 2. Collect votes. If using a vote button then email each vote to the vote thread.
 3. When time expires and the vote passes then send the results. If pausing for the RM include that in the results email.
 4. If automatically proceeding to make the release then move to either the _passes_ phase or the _failed_ phase.
+5. If this is a release for an Incubator podling (PPMC) then the vote pass a second vote phase on general@incubator.apache.org.
