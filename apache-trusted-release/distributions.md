@@ -18,7 +18,9 @@ Support will be added to the ATR for distribution of release and test packages t
 7. ... and many more
 
 Channels may have a TEST distribution channel.
-PMCs choose in their Product Line configuration which channels to distribute TEST and Release Artifacts
+PMCs choose in their Product Line configuration which channels to distribute TEST and Release Artifacts.
+
+> For the first phase we will only support the first 2 - 4 Channels.
 
 ## Tasks
 
