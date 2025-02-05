@@ -17,10 +17,10 @@ See [Data Model](./data-model.md) for a discussion of the objects managed by the
 4. Monolithic.
 5. Fronted by a CDN. The caching policies need to properly defined.
 
-## Legacy Redirect Rules
+## Legacy
 
-1. Redirect from https://downloads.apache.org
-2. Redirect from https://archives.apache.org
+1. dist.apache.org and archive.apache.org are the current source for releases to migrate.
+2. archive.apache.org, downloads.apache.org, and dlcdn.apache.org will continue to serve static requests. It is an implementation decision how.
    
 ### Release Stages
 
