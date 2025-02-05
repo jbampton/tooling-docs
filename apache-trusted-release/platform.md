@@ -40,15 +40,15 @@ See [Release Lifecycle](./lifecycle.md) for how phases are chained together to p
 The co-ordinates make up the external path to objects. The metadata database provides the map to the local path.
 
 1. Stage (Candidate, Current, Archived, …)
-2. Project (Responsible TLP)
-3. Product (Main, Sub-projects)
+2. PMC (Responsible TLP or Incubator PPMC)
+3. Product Line (Main, Sub-projects)
 4. Version (String, latest)
 5. Files, Metadata (A release is a folder of one or more files or sub-folders)
 
-- Latest main product release: `/<stage>/<project>/latest/<file>`
-- Main product by version: `/<stage>/<project>/<version>/<file>`
-- Latest product release: `/<stage>/<project>/<product>/latest/<file>`
-- Product release by version: `/<stage>/<project>/<product>/<version>/<file>`
+- Latest main product release: `/<stage>/<pmc>/latest/<file>`
+- Main product by version: `/<stage>/<pmc>/<version>/<file>`
+- Latest product release: `/<stage>/<pmc>/<product>/latest/<file>`
+- Product release by version: `/<stage>/<pmc>/<product>/<version>/<file>`
 
 ### Restful API
 
@@ -60,6 +60,7 @@ The co-ordinates make up the external path to objects. The metadata database pro
 
 2. CRUD on 
    - Releases - Delete is not removal. It is a stage.
+   - Artifacts - Managed with a Release. Sysadmins can do targeted full CRUD on artifacts if required.
    - Public Signing Keys - Delete only if unused.
    - Votes - Store each vote in metadata.
    - SBOMs - Special files stored in the release folder.
@@ -80,8 +81,10 @@ The co-ordinates make up the external path to objects. The metadata database pro
 ### Web UI
 
 1. Directory Pages
-   - Project directory (_main page_)
-   - Project release directory
+   - PMC directory (_main page_) - excludes podlings and atticked PMCs
+   - PMC release directory (also PPMC)
+   - Incubator podling directory
+   - Atticked PMC directory
 
 2. Release Page
    - Static public version for Current and Archived Stages.
@@ -95,10 +98,18 @@ The co-ordinates make up the external path to objects. The metadata database pro
    - PMC level metadata and releases
    - Product level metadata and releases
    - Manage releases
+   - PMC lifecycle transitions - podling, TLP, attic.
 
+5. System Admin Page
+   - Manage Distribution Channels
+   - Perform Migration Tasks
+   - Enable GHA Builds
+   - Manage PMC Transitions
+   - Watch Operations
+     
 5. Audit Page
    - ASF event history
-   - Project event history
+   - PMC event history
    - Product event history
 
 6. Page Template
