@@ -70,8 +70,8 @@ While reading consider these Notes:
 ## 7. Future Requirements
 
    - Integrate with the [Security Advisory Process](advisory-process.md) to make it easy to track applicable advisories on download pages.
-   - Expand support for [Evaluating Build Claims[(evaluate.md) to additional build tools.
+   - Expand support for [Evaluating Build Claims](evaluate.md) to additional build tools.
    - Expand automated support for additional [Distribution Channels](distributions.md).
-   - [Signing Candidates](./digital-signatures.md) during ATR processing is deferred. For now, creating digita1 signatures on certain artifact types
+   - [Signing Candidates](./digital-signatures.md) during ATR processing is deferred. For now, creating digital signatures on certain artifact types
      must be done prior to GPG signing and prior to submission of the release candidate.
 
