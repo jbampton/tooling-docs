@@ -68,7 +68,8 @@ While reading consider these Notes:
    - Run book for releases.apache.org
    - Progress on the retirement path for `svn:dist`. See [Legacy Releases from SVN Dist](svn-dist.md)
      for possible transitional states. For this first iteration _transition 2_ is preferred.
-   - Assure support legacy urls for dist.apache.org, downloads.apache.org, dlcdn.apache.org, and archive.apache.org
+   - Legacy urls for dist.apache.org, downloads.apache.org, dlcdn.apache.org, and archive.apache.org remain supported.
+   - Path schemes for downloads.apache.org, dlcdn.apache.org, and archive.apache.org remain.
 
 ## 7. Future Requirements
 
