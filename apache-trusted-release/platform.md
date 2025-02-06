@@ -60,7 +60,7 @@ The co-ordinates make up the external path to objects. The metadata database pro
 
 2. CRUD on 
    - Releases - Delete is not removal. It is a stage.
-   - Artifacts - Managed with a Release. Sysadmins can do targeted full CRUD on artifacts if required.
+   - Artifacts - Managed with a Release. Infra can do targeted full CRUD on artifacts if required.
    - Public Signing Keys - Delete only if unused.
    - Votes - Store each vote in metadata.
    - SBOMs - Special files stored in the release folder.
