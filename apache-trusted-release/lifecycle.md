@@ -63,8 +63,8 @@ flowchart TD
 
 ## Phases
 
-**Announce Release**
-: Send a compliant announcement of the release. This template will include release metadata.
+**[Announce Release](https://www.apache.org/legal/release-policy.html#release-announcements)**
+: Send a compliant announcement of the release. This template will include release metadata and should point to our static release download page. That page should refer back to the project's website.
 
 **Archived**
 : A Release in this stage/phase has been archived, revoked, or abandoned.
