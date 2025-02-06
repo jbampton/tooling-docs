@@ -7,7 +7,7 @@ https://releases.apache.org
 > We will iterate on these during implementation.
 
 1. Release Storage. A large filesystem with folders for each release's files.
-2. Metadata Database. An sql database on the server with the metadata schema.
+2. Metadata Database. A database on the server with the metadata schema.
 
 See [Data Model](./data-model.md) for a discussion of the objects managed by the ATR.
 
@@ -29,12 +29,12 @@ See [Data Model](./data-model.md) for a discussion of the objects managed by the
    
 ### Release Stages
 
-1. Build Releases - while not managed by the ATR there are bridges.
+1. Build Releases
 2. Candidate Releases
 3. Current Releases
 4. Archived / Revoked / EOL / Atticked Releases
 
-> “Nightlies” is for a later phase.
+> “Nightlies” a particular build type is for a later phase.
 
 ### Release Phases
 
@@ -50,7 +50,7 @@ The co-ordinates make up the external path to objects. The metadata database pro
 4. Version (String, latest)
 5. Files, Metadata (A release is a folder of one or more files or sub-folders)
 
-> The following are examples and we should discuss as an implementation choice.
+> The following are examples. We will iterate during implementation.
 
 - Latest main product release: `/<stage>/<pmc>/latest/<file>`
 - Main product by version: `/<stage>/<pmc>/<version>/<file>`
