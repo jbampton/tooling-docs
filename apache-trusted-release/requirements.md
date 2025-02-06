@@ -16,8 +16,8 @@ While reading consider these Notes:
 ## 2. Community
 
    - Work with a selection of **Apache** PMCs, **Incubator PPMCs(podlings)**, and **Infra** for **User Acceptance Testing (UAT)**.
-   - Co-ordinate with **Infra** on migration to and operating this complex stack.
-   - Contribute to Infra's **asfquart** and **asfpy** frameworks when the code belongs there.
+   - Co-ordinate with **Infra** on migration and operation.
+   - Contribute to Infra's **asfquart** and **asfpy** frameworks.
    - Provide openings for volunteers to help so long as the contributions are adequate and timely.
    - Assure that the **ATR platform** follows industry best practices especially regarding **SBOMs**,
      **Certificate Management**, and **Digital Signatures**.
@@ -27,17 +27,17 @@ While reading consider these Notes:
 ## 3. Apache Trusted Release Platform (ATR)
 
    - Incorporate all PMC Releases.
-     - Download page. (migrated/mirrored from dist/release)
-     - Release Candidate pages. (migrated/mirrored from dist/dev)
-     - Archived download page. (migrated from archives)
+     - Download page.
+     - Release Candidate page.
+     - Archived download page.
    - Every PMC has a management interface.
      - Current manual release practice is viewable.
      - Automated release status.
      - **KEYS** file management including revoking keys.
-     - Manual triggers.
+     - Trigger release phases.
      - Tracking performance.
    - Platform includes a RESTful API.
-   - Platform prefers to serve static content.
+   - Serve release artifacts efficiently.
    - Make switching from current manual release process to a minimal ATR process very simple.
    - System Admins (Infra) have a management interface.
    - Provide operational status to help Infra monitor ATR operations through the Infra Reporting Dashboard (IRD).
@@ -76,6 +76,9 @@ While reading consider these Notes:
    - Integrate with the [Security Advisory Process](advisory-process.md) to make it easy to track applicable advisories on download pages.
    - Expand support for [Evaluating Build Claims](evaluate.md) to additional build tools.
    - Expand automated support for additional [Distribution Channels](distributions.md).
-   - [Signing Candidates](./digital-signatures.md) during ATR processing is deferred. For now, creating digital signatures on
-     certain artifact types must be done prior to GPG signing and prior to submission of the release candidate.
+   - Include a [Signing Candidates](./digital-signatures.md) phase during ATR processing. 
+
+     > There are policy implications to the automation of digital signatures.
+     > For now, creating digital signatures on certain artifact types must be done prior to GPG signing and
+     > prior to submission of the release candidate.
 
