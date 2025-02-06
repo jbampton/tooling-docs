@@ -37,7 +37,7 @@ While reading consider these Notes:
      - Manual triggers.
      - Tracking performance.
    - Platform includes a RESTful API.
-   - Platform perfers to serve static content.
+   - Platform prefers to serve static content.
    - Make switching from current manual release process to a minimal ATR process very simple.
    - System Admins (Infra) have a management interface.
    - Provide operational status to help Infra monitor ATR operations through the Infra Reporting Dashboard (IRD).
