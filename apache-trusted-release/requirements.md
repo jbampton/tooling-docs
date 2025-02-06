@@ -64,7 +64,7 @@ While reading consider these Notes:
 
 ## 6. Additional Requirements
 
-   - Retire dist.apache.org svn repository once all 200+ PMCs having fully switched over to directly using the **ATR**.
+   - Retire dist.apache.org svn repository once all 200+ PMCs have fully switched over to directly using the **ATR**.
    - Continue to support legacy urls for dist.apache.org, downloads.apache.org, dlcdn.apache.org, and archive.apache.org
 
 ## 7. Future Requirements
