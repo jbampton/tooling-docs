@@ -80,6 +80,8 @@ The co-ordinates make up the external path to objects. The metadata database pro
 
 ### Web UI
 
+Note: this section a flexible outline of what we intend for the UI, and may change during implementation.
+
 1. Directory Pages
    - PMC directory (_main page_) - excludes podlings and atticked PMCs
    - PMC release directory (also PPMC)
