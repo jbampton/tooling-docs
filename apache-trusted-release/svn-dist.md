@@ -1,4 +1,4 @@
-# Legacy Releases from SVN Dist
+ but # Legacy Releases from SVN Dist
 
 We have three types of Releases to create using a "Pull from 'Dist'" process.
 
@@ -8,14 +8,101 @@ We have three types of Releases to create using a "Pull from 'Dist'" process.
 
 3. Archived Releases which are migrated from the archive if not present in the Current Releases.
 
-## PMC Management Page
+## ATR Web UX
 
-1. **Create Release Candidate** - upload the packages for a release candidate from `svn:dist/dev`
+We will need pages to perform tasks related to the use of our legacy setup.
 
-2. **Legacy Release** - upload an approved release from `svn:dist/release`.
+### PMC Management Page
 
-## System Admin Page
+1. **Create Release Candidate** - upload the packages for a release candidate from `svn:dist/dev`. This page can also handle direct uploads.
+
+3. **Legacy Release** - upload an approved release from `svn:dist/release`.
+
+### System Admin Page
 
 1. **Synchronise Current Releases** - scan `svn:dist/release` and migrate any not in the ATR.
 
-2. **Sychronize Release Archice** - scan `archive` repository and migrate any archived not in the ATR as a Current or Archived Release.
+2. **Sychronize Release Archive** - scan `archive` repository and migrate any archived not in the ATR as a Current or Archived Release.
+
+## Backends Hosting Release Artifacts
+
+The legacy domains are currently connected to `svn:dist/release` as follows:
+
+1. rsync.apache.org has a directory that updates a checkout of `svn:dist/release`
+2. downloads.apache.org periodically rsyncs with rsync.apache.org
+3. archive.apache.org periodically rsyncs with rsync.apache.org without removing artifacts from the destination.
+
+### Transitional Steps
+
+```mermaid
+flowchart TD
+    subgraph Legacy
+    A[svn:dist/release]
+    B[rsync.apache.org]
+    A -->|svn| B
+    C[downloads.apache.org]
+    D[archive.apache.org]
+    B -->|rsync| C
+    B -->|rsync| D
+    end
+```
+
+1. **ATR writes to SVN** - ATR Releases write to `svn:dist/release` as an interim step.
+
+```mermaid
+flowchart TD
+    subgraph Transition 1
+    ATR[ATR]
+    A[svn:dist/release]
+    ATR -->|svn| A
+    B[rsync.apache.org]
+    A -->|svn| B
+    C[downloads.apache.org]
+    D[archive.apache.org]
+    B -->|rsync| C
+    B -->|rsync| D
+    end
+```
+
+2. **ATR and Legacy are Integrated** - Insert ATR into the rsync chain.
+   - ATR has a directory with the same organization as `svn:dist/release` using symbolic links to the Releases in the ATR Datastore.
+   - ATR's rsync from rsync.apache.org should detect legacy release addition and deletion.
+
+```mermaid
+flowchart TD
+    subgraph Transition 2
+    A[svn:dist/release]
+    B[rsync.apache.org]
+    A -->|svn| B
+    ATR[ATR]
+    B -->|rsync| ATR
+    C[downloads.apache.org]
+    D[archive.apache.org]
+    ATR -->|rsync| C
+    ATR -->|rsync| D
+    end
+```
+ 
+3. **Legacy is Retired** - `svn:dist/release` is retired.
+
+```mermaid
+flowchart TD
+    subgraph Transition 3
+    ATR[ATR]
+    C[downloads.apache.org]
+    D[archive.apache.org]
+    ATR -->|rsync| C
+    ATR -->|rsync| D
+    end
+```
+ 
+4. **Further Integration** - downloads.apache.org is hosted on ATR.
+
+```mermaid
+flowchart TD
+    subgraph Transition 4
+    ATR[ATR]
+    D[archive.apache.org]
+    ATR -->|rsync| D
+    end
+```
