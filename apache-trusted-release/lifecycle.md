@@ -68,11 +68,11 @@ flowchart TD
 : A Release in this stage/phase has been archived, revoked, or abandoned.
 
 **[ATR Platform](./platform.md)**
-: Apache Trusted Release is a service with a web UI and restful API for managing the lifecycle of project releases.
+: Apache Trusted Release is a service with a web UI and REST API for managing the lifecycle of project releases.
 
 **[Distribute](./distributions.md)**
-: Release and Test distributions will be automated for many channels. An email will be sent about package managers need which need manual distribution.
-Once that is complete the Release Manager will need to move to the next Phase. If all distributions automatically complete then moving to the next phase is automatic,
+: Release and Test distributions will be automated for many channels. An email will be sent about package managers which need manual distribution.
+Once that is complete the Release Manager will need to move to the next Phase. If all distributions automatically complete then moving to the next phase is automatic.
 
 **[Evaluate Claims](./evaluate.md)**
 : Evaluate claims on the Candidate by performing numerous checks for policy compliance. Fails if compliance minimums are unmet.
@@ -106,4 +106,4 @@ Once that is complete the Release Manager will need to move to the next Phase. I
 : Once the Release is distributed and announced, this Release should remain in this phase as long as it is available.
 
 **[RM Local Build](./platform.md)**
-: Release Managers upload or push a release candidate into the ATR using either an api or a web page.
+: Release Managers upload or push a release candidate into the ATR using either an API or a web page.
