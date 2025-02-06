@@ -41,7 +41,7 @@ While reading consider these Notes:
    - Make switching from current manual release process to a minimal ATR process very simple.
    - System Admins (Infra) have a management interface.
    - Provide operational status to help Infra monitor ATR operations through the Infra Reporting Dashboard (IRD).
-   - Develop the platform with an emphasis on reusability outside of the ASF ecosystem, where feasible with regards to development costs.
+   - Develop the platform with consideration about reusability outside of the ASF ecosystem, where feasible with regards to development costs.
 
    See [Platform Services](./platform.md) for detailed requirements for the **ATR**.
 
