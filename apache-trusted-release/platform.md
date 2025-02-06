@@ -4,7 +4,9 @@ https://releases.apache.org
 
 ## Datastore
 
-1. Release Storage. A large filesystem with folders for each release's files. The release folder path is immutable.
+> We will iterate on these during implementation.
+
+1. Release Storage. A large filesystem with folders for each release's files.
 2. Metadata Database. An sql database on the server with the metadata schema.
 
 See [Data Model](./data-model.md) for a discussion of the objects managed by the ATR.
