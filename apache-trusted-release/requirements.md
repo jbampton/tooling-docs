@@ -9,7 +9,7 @@ While reading consider these Notes:
 
    - Minimize human interaction.
    - Community participation on **Release Votes** remains via email.
-   - Record all of the key events for tracking operations and performance.
+   - Record all of the key events and metrics for tracking operations and performance.
    - PMCs can quickly benefit.
    - Infra costs and management complexity are decreased.
 
