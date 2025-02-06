@@ -88,8 +88,10 @@ The co-ordinates make up the external path to objects. The metadata database pro
 
 2. Release Page
    - Static public version for Current and Archived Stages.
+   - [Download page requirements](https://infra.apache.org/release-download-pages.html)
    - Otherwise dynamic for Candidate Stage and when accessed from the PMC Management Page. 
    - Release level metadata
+   - PMC Information and webspage links
    - Download package from directory of release
    - Maintenance actions
    - History of events
