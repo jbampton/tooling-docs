@@ -109,6 +109,6 @@ Multiple roles are possible and available actions are composed. Empty cells deno
 | view project events | yes | yes | yes | yes | yes | yes
 | search all events | | | | | yes | yes
 
-> To vote _visitors_ must provide PII and we'll need to assure that this is affirmatively agreed and self-revocable.
+> To vote _visitors_ must provide PII and we need to explain how we are protecting their privacy.
 
 > The authorization and authentication for `GitHub PATs` will be specific and fine-grained, but should be similar to a "release manager"
