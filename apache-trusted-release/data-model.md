@@ -2,7 +2,7 @@
 
 Here is an introduction to the ATR's data model.
 
-> The view here is descriptive of a json model, but the implementation will be a combination of filesytem files and subdirs along with a database schema.
+> The view here is descriptive of a JSON model, but the implementation will be a combination of filesystem files and subdirs along with a database schema.
 
 ## PMCs
 
@@ -20,7 +20,7 @@ Projects are run by a PMC with members and committers, have metadata, vote polic
 
 ### Product Lines
 
-One or more product lines with separate releases including the main one. A product line may override pmc vote policy.
+One or more product lines with separate releases including the main one. A product line may override PMC vote policy.
 
 1. Key
 2. PMC
@@ -35,7 +35,7 @@ One or more product lines with separate releases including the main one. A produ
 
 ### Public Signing Keys
 
-Public Signing Keys are stored using the User id of the owner as the key. When attached
+Public Signing Keys are stored using the User ID of the owner as the key.
 
 1. User
 2. Public Signing Key
@@ -58,7 +58,7 @@ These are a set of choices which control how a release vote is conducted by the 
 
 Releases are related groups of packages. Candidate releases go through stages and these have phases.
 When approved to be released the stage is moved to current.
-Currrent releases have initial phases to distribute and announce the release.
+Current releases have initial phases to distribute and announce the release.
 
 1. Storage key
 2. Stage
@@ -69,13 +69,13 @@ Currrent releases have initial phases to distribute and announce the release.
 3. Version
 5. Packages - List of triples of file, signature, and checksum that are the downloadable components of a release.
    > Should we use Artifacts instead of Packages?
-6. SBOMs - in an acceptable SBOM format and maintained in Phases using standard python libraries.
+6. SBOMs - in an acceptable SBOM format and maintained in Phases using standard Python libraries.
 8. Vote Policy
 5. Votes
    - Pass or Fail
    - Summary
    - Binding votes
-   - Votes
+   - Community votes
    - Start
    - End
 
@@ -93,7 +93,7 @@ Distribution channels may be for test packages. Package Managers will be automat
 
 ## User Roles
 
-Multiple roles are possible and available actions are composed.
+Multiple roles are possible and available actions are composed. Empty cells denote "no".
 
 | Activity   | PMC Member | Release Manager | Committer | Visitor | ASF Member | SysAdmin
 | ---------- | ---------- | --------------- | --------- | ------- | ---------- | -----
@@ -109,6 +109,6 @@ Multiple roles are possible and available actions are composed.
 | view project events | yes | yes | yes | yes | yes | yes
 | search all events | | | | | yes | yes
 
-> To vote _visitors_ must provide PII and we'll need to assure that this is affirmatively agreed and sef-revocable.
+> To vote _visitors_ must provide PII and we'll need to assure that this is affirmatively agreed and self-revocable.
 
 > The authorization and authentication for `GitHub PATs` will be specific and fine-grained, but should be similar to a "release manager"
