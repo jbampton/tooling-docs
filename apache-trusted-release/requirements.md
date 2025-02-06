@@ -63,16 +63,18 @@ While reading consider these Notes:
 
    Here is a flow chart showing the [Release Lifecycle Phases](lifecycle.md).
 
-## 6. Additional Requirements
+## 6. Infrastructure Requirements
 
-   - Retire dist.apache.org svn repository once all 200+ PMCs have fully switched over to directly using the **ATR**.
-   - Continue to support legacy urls for dist.apache.org, downloads.apache.org, dlcdn.apache.org, and archive.apache.org
+   - Run book for releases.apache.org
+   - Progress on the retirement path for `svn:dist`. See [Legacy Releases from SVN Dist](svn-dist.md)
+     for possible transitional states. For this first iteration _transition 2_ is preferred.
+   - Assure support legacy urls for dist.apache.org, downloads.apache.org, dlcdn.apache.org, and archive.apache.org
 
 ## 7. Future Requirements
 
    - Integrate with the [Security Advisory Process](advisory-process.md) to make it easy to track applicable advisories on download pages.
    - Expand support for [Evaluating Build Claims](evaluate.md) to additional build tools.
    - Expand automated support for additional [Distribution Channels](distributions.md).
-   - [Signing Candidates](./digital-signatures.md) during ATR processing is deferred. For now, creating digital signatures on certain artifact types
-     must be done prior to GPG signing and prior to submission of the release candidate.
+   - [Signing Candidates](./digital-signatures.md) during ATR processing is deferred. For now, creating digital signatures on
+     certain artifact types must be done prior to GPG signing and prior to submission of the release candidate.
 
