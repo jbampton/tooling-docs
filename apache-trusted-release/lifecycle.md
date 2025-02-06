@@ -25,8 +25,6 @@ flowchart TD
     subgraph Release Candidate Stage
     D@{ shape: processes, label: "Evaluate Claims" }
     C --> D
-    DD@{ shape: process, label: "Sign Candidate" }
-    D -->|pass| DD
     GG@{ shape: processes, label: "Distribute (Test)" }
     E@{ shape: sl-rect, label: "Release Vote" }
     JJJ@{ shape: circ, label: "Passes" }
@@ -36,7 +34,7 @@ flowchart TD
     GG -->|fail| F
     D -->|fail| F
     F -->|new candidate| C
-    DD --> GG
+    D -->|pass| GG
     GG --> E
     end
     II[Migration]
@@ -109,6 +107,3 @@ Once that is complete the Release Manager will need to move to the next Phase. I
 
 **[RM Local Build](./platform.md)**
 : Release Managers upload or push a release candidate into the ATR using either an api or a web page.
-
-**[Sign Candidate](./digital-signatures.md)**
-: Optionally sign packages using digital certificates through a service.
