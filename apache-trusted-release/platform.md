@@ -19,8 +19,11 @@ See [Data Model](./data-model.md) for a discussion of the objects managed by the
 
 ## Legacy
 
-1. dist.apache.org and archive.apache.org are the current source for releases to migrate.
-2. archive.apache.org, downloads.apache.org, and dlcdn.apache.org will continue to serve static requests. It is an implementation decision how.
+1. These domains continue to work in the same way:
+   - archive.apache.org
+   - downloads.apache.org and dlcdn.apache.org
+   - dist.apache.org
+2. See [Legacy Releases from SVN Dist](./svn-dist.md). In this development phase we prefer to be at _transition 2_.
    
 ### Release Stages
 
@@ -44,6 +47,8 @@ The co-ordinates make up the external path to objects. The metadata database pro
 3. Product Line (Main, Sub-projects)
 4. Version (String, latest)
 5. Files, Metadata (A release is a folder of one or more files or sub-folders)
+
+> The following are examples and we should discuss as an implementation choice.
 
 - Latest main product release: `/<stage>/<pmc>/latest/<file>`
 - Main product by version: `/<stage>/<pmc>/<version>/<file>`
@@ -89,9 +94,7 @@ Note: this section is a flexible outline of what we intend for the UI, and may c
    - Atticked PMC directory
 
 2. Release Page
-   - Static public version for Current and Archived Stages.
    - [Download page requirements](https://infra.apache.org/release-download-pages.html)
-   - Otherwise dynamic for Candidate Stage and when accessed from the PMC Management Page. 
    - Release level metadata
    - PMC Information and webspage links
    - Download package from directory of release
