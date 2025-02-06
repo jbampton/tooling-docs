@@ -2,7 +2,7 @@
 
 Here is an introduction to the ATR's data model.
 
-> The view here is descriptive of a json model, but the implementation will be a combination of filesytem files and subdirs along with an SQLite database schema.
+> The view here is descriptive of a json model, but the implementation will be a combination of filesytem files and subdirs along with a database schema.
 
 ## PMCs
 
