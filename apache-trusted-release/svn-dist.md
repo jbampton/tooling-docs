@@ -1,4 +1,4 @@
- but # Legacy Releases from SVN Dist
+# Legacy Releases from SVN Dist
 
 We have three types of Releases to create using a "Pull from 'Dist'" process.
 
