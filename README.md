@@ -29,7 +29,10 @@ The team's website source will be developed here as well.
 
 ## Board Agenda Tool (BAT)
 
-TBD
+- [Current Requirements](https://github.com/apache/infrastructure-agenda/blob/master/REQUIREMENTS.md)
+- [Whimsy Agenda Tool Analysis](board-agenda-tool/whimsy.md)
+- [Progress Report](board-agenda-tool/progress.md)
+- [Plan](board-agenda-tool/plan.md)
 
 ## Links to various useful Infrastructure repositories
 
