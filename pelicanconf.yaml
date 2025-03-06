@@ -1,0 +1,28 @@
+site:
+  name: ASF Tooling Website
+  description: The official website of the ASF Tooling Team
+  domain: tooling.apache.org
+  logo: /extras/favicon.ico
+  repository: https://github.com/apache/tooling-docs/blob/main/content/
+  trademarks: Apache and the Apache feather logo are trademarks of The Apache Software Foundation.
+theme: content/theme
+setup:
+  ignore:
+    - theme
+  postrun:
+    - /bin/bash pagefind.sh
+plugins:
+  use:
+    - toc
+    - spu
+    - gfm
+content:
+  pages: pages
+  static:
+    - css
+    - js
+    - highlight
+    - images
+    - fonts
+genid:
+  unsafe: yes
