@@ -3,7 +3,7 @@ staging:
   autostage: preview/*
 
 pelican:
-  notify:         commitss@tooling.apache.org
+  notify:         commits@tooling.apache.org
   autobuild:      preview/*
   target:         asf-site
   whoami:         main
