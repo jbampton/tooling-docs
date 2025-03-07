@@ -15,6 +15,8 @@ capabilities that meet the EU's Cyber Resilience Act (CRA) and US’s CISA recom
 New products being developed under the Tooling Initiative are separate from the tools
 developed by ASF Infrastructure.
 
+&nbsp;
+
 ### Tooling Goals
 
 1. Automate the Release Process around compliance guiding ASF open source projects to
@@ -22,14 +24,16 @@ developed by ASF Infrastructure.
 2. Automate the Release Process for the benefit of PMCs while also reducing infrastructure
    costs and management complexity.
 
+&nbsp;
+
 ### Contribute to the Discussion
 
-&nbsp; | &nbsp;
---------|---------
-Repository | https://github.com/apache/tooling-docs
-ASF Slack Channels | [#tooling-discuss](https://the-asf.slack.com/archives/C086X8CKEMB) <br/> [#apache-trusted-releases](https://the-asf.slack.com/archives/C049WADAAQG)
-Mailing List | dev@tooling.apache.org
-Subscribe to Mailing List | dev-subscribe@tooling.apache.org
+Resources | Links
+--------:|---------
+Repository: | https://github.com/apache/tooling-docs
+ASF Slack Channels: | [#tooling-discuss](https://the-asf.slack.com/archives/C086X8CKEMB) – [#apache-trusted-releases](https://the-asf.slack.com/archives/C049WADAAQG)
+Mailing List: | dev@tooling.apache.org
+Subscribe to Mailing List: | dev-subscribe@tooling.apache.org
 
 &nbsp;
 
