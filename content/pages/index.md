@@ -26,7 +26,7 @@ developed by ASF Infrastructure.
 
 - Repository: https://github.com/apache/tooling-docs
 - ASF Slack Channels: [#tooling-discuss](https://the-asf.slack.com/archives/C086X8CKEMB) – [#apache-trusted-releases](https://the-asf.slack.com/archives/C049WADAAQG)
-- Mailing List: dev@tooling.apache.org - [archives](https://lists.apache.org/list.html?dev@tooling.apache.org)
+- Mailing List: dev@tooling.apache.org – [archives](https://lists.apache.org/list.html?dev@tooling.apache.org)
 - Subscribe to Mailing List: dev-subscribe@tooling.apache.org
 
 ### Security Issues
