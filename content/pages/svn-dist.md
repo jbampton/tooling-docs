@@ -1,3 +1,6 @@
+Title: Releases from SVN Dist
+license: https://www.apache.org/licenses/LICENSE-2.0
+
 # Legacy Releases from SVN Dist
 
 We have three types of Releases to create using a "Pull from 'Dist'" process.
