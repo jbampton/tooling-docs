@@ -5,6 +5,11 @@ on:
     # When creating a new site branch, please ensure that the push and checkout branches agree
     # and that the action/pelican destination value is updated accordingly
     branches: [ 'main' ]
+    paths:
+      - 'content/**'
+      - 'pelicanconf.py'
+      - '.asf.yaml'
+      - 'requirements.txt'
   workflow_dispatch:
 jobs:
   build-pelican:
