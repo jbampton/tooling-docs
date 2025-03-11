@@ -13,7 +13,7 @@ https://releases.apache.org
 1. Release Storage. A large filesystem with folders for each release's files.
 2. Metadata Database. A database on the server with the metadata schema.
 
-See [Data Model](https://github.com/apache/tooling-docs/blob/main/apache-trusted-release/data-model.md) for a discussion of the objects managed by the ATR.
+See [Data Model](data-model.html) for a discussion of the objects managed by the ATR.
 
 ## Web Service
 
