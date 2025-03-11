@@ -41,7 +41,7 @@ The main project is the Apache Trusted Release Platform.
    - Provide operational status to help Infra monitor ATR operations through the Infra Reporting Dashboard (IRD).
    - Develop the platform with consideration about reusability outside of the ASF ecosystem, where feasible with regards to development costs.
 
-   See [Platform Services](platform.md) for detailed requirements for the **ATR**.
+   See [Platform Services](platform.html) for detailed requirements for the **ATR**.
 
 ## 4. Automate Release Process around Compliance
 
