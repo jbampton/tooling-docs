@@ -3,7 +3,7 @@
 A Release goes through a lifecycle of **stages**.
 
 Stages include **Build**, **Candidate**, **Vote**, **Finish**, **Released**, and **Archived**.
-The ATR does not manage build stage and legacy releases. It takes over the relase process on the transition to the candidate stage.
+The ATR does not manage build stage and legacy releases. It takes over the release process on the transition to the candidate stage.
 Stages are the states of a release in the **ATR**.
 
 ```mermaid
