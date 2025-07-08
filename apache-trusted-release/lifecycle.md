@@ -1,12 +1,10 @@
 # Release Lifecycle
 
-A Release will go through a lifecycle of **stages** and **phases**.
+A Release goes through a lifecycle of **stages**.
 
-Stages include **Build**, **Candidate**, **Current**, and **Archived**.
-The ATR does not manage build stage and legacy releases. It takes over on the transition from the build to the candidate stage.
-Stages control where on the **ATR** Website a release can be found.
-
-Phases are states or activities during a Release's life cycle.
+Stages include **Build**, **Candidate**, **Vote**, **Finish**, **Released**, and **Archived**.
+The ATR does not manage build stage and legacy releases. It takes over the relase process on the transition to the candidate stage.
+Stages are the states of a release in the **ATR**.
 
 ```mermaid
 flowchart TD
@@ -19,41 +17,36 @@ flowchart TD
     end
     subgraph Apache Trusted Release
     C@{ shape: docs, label: "Release Candidate" }
-    A -->|gha to api| C
-    BB -->|api or web page| C
-    B -->|web page| C
-    subgraph Release Candidate Stage
+    A -->|client/openapi| C
+    BB -->|client/openapi or web ux| C
+    B -->|web ux| C
+    subgraph Candidate Stage
     D@{ shape: processes, label: "Evaluate Claims" }
     C --> D
+    end
+    subgraph Vote Stage
     GG@{ shape: processes, label: "Distribute (Test)" }
-    E@{ shape: sl-rect, label: "Release Vote" }
-    JJJ@{ shape: circ, label: "Passes" }
-    F@{ shape: dbl-circ, label: "Failed" }
-    E -->|pass| JJJ
-    E -->|fail| F
-    GG -->|fail| F
-    D -->|fail| F
-    F -->|new candidate| C
-    D -->|pass| GG
+    E@{ shape: processes, label: "Release Vote" }
+    E -->|fail| C
+    D -->|vote| GG
     GG --> E
     end
     II[Migration]
-    subgraph Current Release Stage
-    JJ@{ shape: docs, label: "Release" }
-    JJJ --> JJ
-    G@{ shape: processes, label: "Distribute" }
-    G --> I
+    subgraph Finish Stage
+    G@{ shape: processes, label: "Reorganize" }
+    E -->|pass| G
     I[Announce Release]
-    JJ --> G
-    J@{ shape: dbl-circ, label: "Released" }
+    G --> I
+    end
+    subgraph Released Stage
+    J@{ shape: docs, label: "Released" }
     I -->|announced| J
     end
     B -->|migration| II
     II -->|current| J
-    subgraph Archived Release Stage
-    K@{ shape: dbl-circ, label: "Archived" }
+    subgraph Archived Stage
+    K@{ shape: docs, label: "Archived" }
     end
-    G -->|failure| K
     J -->|archive| K
     II -->|archived| K
     end
@@ -64,22 +57,18 @@ flowchart TD
 **[Announce Release](https://www.apache.org/legal/release-policy.html#release-announcements)**
 : Send a compliant announcement of the release. This template will include release metadata and should point to our static release download page. That page should refer back to the project's website.
 
-**Archived**
+**Archived Stage**
 : A Release in this stage/phase has been archived, revoked, or abandoned.
 
 **[ATR Platform](./platform.md)**
-: Apache Trusted Release is a service with a web UI and REST API for managing the lifecycle of project releases.
+: Apache Trusted Releases is a service with a web UI and REST API for managing the lifecycle of project releases.
 
 **[Distribute](./distributions.md)**
-: Release and Test distributions will be automated for many channels. An email will be sent about package managers which need manual distribution.
+: _in progress_ Release and Test distributions will be automated for many channels. An email will be sent about package managers which need manual distribution.
 Once that is complete the Release Manager will need to move to the next Phase. If all distributions automatically complete then moving to the next phase is automatic.
 
 **[Evaluate Claims](./evaluate.md)**
 : Evaluate claims on the Candidate by performing numerous checks for policy compliance. Fails if compliance minimums are unmet.
-
-**Failed**
-: A Release Candidate may end in this state. The project can either abandon it or update and resubmit it.
- The Release Manager will need to decide the next phase.
 
 **[GHA Secure Build](./github-build.md)**
 : In a GitHub workflow the release candidate is built and validated following the Security Release Policy.
