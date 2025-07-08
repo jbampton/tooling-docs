@@ -31,19 +31,19 @@ flowchart TD
     D -->|vote| GG
     GG --> E
     end
-    II[Migration]
+    II@{ shape: processes, label: "Migration" }
     subgraph Finish Stage
     G@{ shape: processes, label: "Reorganize" }
     E -->|pass| G
-    I[Announce Release]
+    I@{ shape: processes, label: "Distribute" }
     G --> I
     end
     subgraph Released Stage
     J@{ shape: docs, label: "Released" }
-    I -->|announced| J
+    I -->|announce release| J
     end
     B -->|migration| II
-    II -->|current| J
+    II --> |current| J
     subgraph Archived Stage
     K@{ shape: docs, label: "Archived" }
     end
