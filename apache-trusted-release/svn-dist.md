@@ -22,7 +22,7 @@ We will need pages to perform tasks related to the use of our legacy setup.
 
 1. **Synchronise Current Releases** - scan `svn:dist/release` and migrate any not in the ATR.
 
-2. **Sychronize Release Archive** - scan `archive` repository and migrate any archived not in the ATR as a Current or Archived Release.
+2. **Synchronize Release Archive** - scan `archive` repository and migrate any archived not in the ATR as a Current or Archived Release.
 
 ## Backends Hosting Release Artifacts
 

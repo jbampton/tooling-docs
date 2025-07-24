@@ -1,6 +1,6 @@
 # Vote Phase
 
-The ATR should take over repsonsibility from the Release Manager for running a Vote where the steps are recorded.
+The ATR should take over responsibility from the Release Manager for running a Vote where the steps are recorded.
 
 ## Policy
 
