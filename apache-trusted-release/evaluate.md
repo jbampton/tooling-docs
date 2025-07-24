@@ -25,5 +25,5 @@ In this phase the ATR will check claims about the release artifacts to enforce p
 2. Validate License Headers including double checking "RAT excludes" to check for valid excludes.
 3. Validate LICENSE and NOTICE.
 4. Validate Dependency Licensing.
-5. Validate Reprodicible Build Packaging.
+5. Validate Reproducible Build Packaging.
 6. Validate SBOMs (generate?).
