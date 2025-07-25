@@ -8,30 +8,19 @@ Stages are the states of a release in the **ATR**.
 
 ```mermaid
 flowchart TD
-    subgraph Build Stage
-    A[GHA Secure Build]
-    BB[RM Local Build]
-    end
-    subgraph Legacy
-    B[Legacy SVN Dist]
-    end
-    subgraph Apache Trusted Release
+    subgraph ATR
     C@{ shape: docs, label: "Release Candidate" }
-    A -->|client/openapi| C
-    BB -->|client/openapi or web ux| C
-    B -->|web ux| C
     subgraph Candidate Stage
     D@{ shape: processes, label: "Evaluate Claims" }
     C --> D
+    GG@{ shape: processes, label: "Distribute (Test)" }
+    D --> GG
     end
     subgraph Vote Stage
-    GG@{ shape: processes, label: "Distribute (Test)" }
     E@{ shape: processes, label: "Release Vote" }
     E -->|fail| C
-    D -->|vote| GG
-    GG --> E
+    GG -->|vote| E
     end
-    II@{ shape: processes, label: "Migration" }
     subgraph Finish Stage
     G@{ shape: processes, label: "Reorganize" }
     E -->|pass| G
@@ -42,14 +31,19 @@ flowchart TD
     J@{ shape: docs, label: "Released" }
     I -->|announce release| J
     end
-    B -->|migration| II
-    II --> |current| J
     subgraph Archived Stage
     K@{ shape: docs, label: "Archived" }
     end
     J -->|archive| K
-    II -->|archived| K
     end
+    subgraph Build Stage
+    A[GHA Secure Build]
+    BB[RM Local Build]
+    B[Legacy SVN Dist]
+    end
+    A -->|client/openapi| ATR
+    BB -->|client/openapi or web ux| ATR
+    B -->|pubsub| ATR
 ```
 
 ## Phases
