@@ -37,11 +37,11 @@ then
     BINDIR=$(mktemp -d)
     TARGET=${BINDIR}/pagefind.tar.gz
     OS_TYPE=x86_64-unknown-linux-musl
-    time wget --quiet -O ${TARGET} https://github.com/CloudCannon/pagefind/releases/download/v${PAGEFIND_VERSION}/pagefind-v${PAGEFIND_VERSION}-${OS_TYPE}.tar.gz
-    echo "${PAGEFIND_HASH}  ${TARGET}" > ${TARGET}.sha256
-    if shasum -a 256 -c ${TARGET}.sha256
+    time wget --quiet -O "${TARGET}" "https://github.com/CloudCannon/pagefind/releases/download/v${PAGEFIND_VERSION}/pagefind-v${PAGEFIND_VERSION}-${OS_TYPE}.tar.gz"
+    echo "${PAGEFIND_HASH}  ${TARGET}" > "${TARGET}.sha256"
+    if shasum -a 256 -c "${TARGET}.sha256"
     then
-        tar -C ${BINDIR} -xkf ${TARGET}
+        tar -C "${BINDIR}" -xkf "${TARGET}"
     else
         echo "Failed to download pagefind correctly"
         exit 1
@@ -50,4 +50,4 @@ then
 fi
 
 echo "Running pagefind on ${PELICAN_OUTPUT_PATH}"
-${PAGEFIND} --site ${PELICAN_OUTPUT_PATH} --output-subdir "_pagefind"
+${PAGEFIND} --site "${PELICAN_OUTPUT_PATH}" --output-subdir "_pagefind"
