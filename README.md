@@ -19,13 +19,15 @@ The team's website source will be developed here as well.
 - You may create and edit new pages you are working on individually.
 - For additional pages and edits, please create a branch and submit a PR.
 
-## Apache Trusted Release Platform (ATR)
+## Apache Trusted Releases Platform (ATR)
 
 - [Requirements](apache-trusted-release/requirements.md)
 - [Platform Services](apache-trusted-release/platform.md)
 - [Data Model](apache-trusted-release/data-model.md)
 - [Release Lifecycle Phases](apache-trusted-release/lifecycle.md)
 - [Page index](apache-trusted-release)
+- https://github.com/apache/tooling-trusted-release
+- https://github.com/apache/tooling-releases-client
 
 ## Board Agenda Tool (BAT)
 
@@ -33,12 +35,11 @@ The team's website source will be developed here as well.
 - [Whimsy Agenda Tool Analysis](board-agenda-tool/whimsy.md)
 - [Progress Report](board-agenda-tool/progress.md)
 - [Plan](board-agenda-tool/plan.md)
+- https://github.com/apache/tooling-agenda
 
 ## Links to various useful Infrastructure repositories
 
 - https://github.com/apache/infrastructure-actions
-- https://github.com/apache/infrastructure-artifact-platform
-- https://github.com/apache/infrastructure-artifacts-configuration
 - https://github.com/apache/infrastructure-asfpy
 - https://github.com/apache/infrastructure-asfquart
 - https://github.com/apache/infrastructure-gha-allowlist-manager
