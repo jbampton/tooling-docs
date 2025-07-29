@@ -37,6 +37,10 @@ The team's website source will be developed here as well.
 - [Plan](board-agenda-tool/plan.md)
 - https://github.com/apache/tooling-agenda
 
+## Secretary's Workbench
+
+- https://github.com/apache/tooling-secretary
+
 ## Links to various useful Infrastructure repositories
 
 - https://github.com/apache/infrastructure-actions
