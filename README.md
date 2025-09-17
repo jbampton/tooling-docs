@@ -9,9 +9,9 @@ The team's website source will be developed here as well.
 - Via [GH Issues](https://github.com/apache/tooling-docs/issues)
 - Email to dev@tooling.apache.org
 - ASF Slack Channels:
-  - [#agenda-tool](https://the-asf.slack.com/archives/C0209DTD3ST)
   - [#apache-trusted-releases](https://the-asf.slack.com/archives/C049WADAAQG)
   - [#tooling-discuss](https://the-asf.slack.com/archives/C086X8CKEMB)
+  - [#agenda-tool](https://the-asf.slack.com/archives/C0209DTD3ST)
 
 ## How to contribute changes
 
@@ -28,6 +28,9 @@ The team's website source will be developed here as well.
 - [Page index](apache-trusted-release)
 - https://github.com/apache/tooling-trusted-release
 - https://github.com/apache/tooling-releases-client
+- https://github.com/apache/tooling-actions
+- https://github.com/apache/tooling-asf-example
+
 
 ## Board Agenda Tool (BAT)
 
