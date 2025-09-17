@@ -12,6 +12,7 @@ The team's website source will be developed here as well.
   - [#apache-trusted-releases](https://the-asf.slack.com/archives/C049WADAAQG)
   - [#tooling-discuss](https://the-asf.slack.com/archives/C086X8CKEMB)
   - [#agenda-tool](https://the-asf.slack.com/archives/C0209DTD3ST)
+- [Website content](https://github.com/apache/tooling-docs/tree/main/content/pages)
 
 ## How to contribute changes
 
@@ -26,6 +27,15 @@ The team's website source will be developed here as well.
 - [Data Model](apache-trusted-release/data-model.md)
 - [Release Lifecycle Phases](apache-trusted-release/lifecycle.md)
 - [Page index](apache-trusted-release)
+
+### Alpha program website
+
+- https://release-test.apache.org
+
+### Source code
+
+GH Issues are enabled in the source code repositories.
+
 - https://github.com/apache/tooling-trusted-release
 - https://github.com/apache/tooling-releases-client
 - https://github.com/apache/tooling-actions
