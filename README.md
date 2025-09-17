@@ -2,7 +2,7 @@
 
 The Tooling team manages development of key tooling efforts for The ASF, and documents and discusses them as outlined on this page.
 
-The team's website source will be developed here as well.
+View the [website](https://tooling.apache.org/).
 
 ## How to contribute to the discussion
 
