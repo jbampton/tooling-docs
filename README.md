@@ -48,10 +48,10 @@ GH Issues are enabled in the source code repositories.
 
 ## Board Agenda Tool (BAT)
 
-- [Current Requirements](https://github.com/apache/tooling-agenda/blob/master/REQUIREMENTS.md)
-- [Whimsy Agenda Tool Analysis](board-agenda-tool/whimsy.md)
-- [Progress Report](board-agenda-tool/progress.md)
-- [Plan](board-agenda-tool/plan.md)
+Delivered to the Chair and in use.
+
+- [Production Tool](https://agenda.apache.org/)
+- [Requirements](https://github.com/apache/tooling-agenda/blob/main/REQUIREMENTS.md)
 - https://github.com/apache/tooling-agenda
 
 ## Secretary's Workbench
