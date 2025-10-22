@@ -40,7 +40,7 @@ flowchart TD
     A[svn:dist/release]
     B[rsync.apache.org]
     A -->|svn| B
-    C[downloads.apache.org]
+    C@{ shape: processes, label: "downloads.apache.org"}
     D[archive.apache.org]
     B -->|rsync| C
     B -->|rsync| D
@@ -52,12 +52,12 @@ flowchart TD
 ```mermaid
 flowchart TD
     subgraph Transition 1
-    ATR[ATR]
+    ATR[releases.apache.org]
     A[svn:dist/release]
     ATR -->|svn| A
     B[rsync.apache.org]
     A -->|svn| B
-    C[downloads.apache.org]
+    C@{ shape: processes, label: "downloads.apache.org"}
     D[archive.apache.org]
     B -->|rsync| C
     B -->|rsync| D
@@ -66,42 +66,66 @@ flowchart TD
 
 2. **ATR and Legacy are Integrated** - Insert ATR into the rsync chain.
    - ATR has a directory with the same organization as `svn:dist/release` using symbolic links to the Releases in the ATR Datastore.
-   - ATR's rsync from rsync.apache.org should detect legacy release addition and deletion.
+
+   - (a) ATR's rsync from rsync.apache.org should detect legacy release addition and deletion.
 
 ```mermaid
 flowchart TD
-    subgraph Transition 2
+    subgraph Transition 2A
     A[svn:dist/release]
     B[rsync.apache.org]
     A -->|svn| B
-    ATR[ATR]
+    ATR[releases.apache.org]
     B -->|rsync| ATR
-    C[downloads.apache.org]
+    C@{ shape: processes, label: "downloads.apache.org"}
     D[archive.apache.org]
     ATR -->|rsync| C
     ATR -->|rsync| D
     end
 ```
+
+   Or
+
+   - (b) ATR coexists on rsync.apache.org and detects legacy release addition and deletion.
+
+
+```mermaid
+flowchart TD
+    subgraph Transition 2B
+    A[svn:dist/release]
+    subgraph ATR on Rsync
+    ATR[releases.apache.org]
+    B[rsync.apache.org]
+    ATR <--> B
+    end
+    A -->|svn| ATR
+    C@{ shape: processes, label: "downloads.apache.org"}
+    D[archive.apache.org]
+    B -->|rsync| C
+    B -->|rsync| D
+    end
+```
+
 
 3. **Legacy is Retired** - `svn:dist/release` is retired.
 
 ```mermaid
 flowchart TD
     subgraph Transition 3
-    ATR[ATR]
-    C[downloads.apache.org]
+    ATR[releases.apache.org]
+    C@{ shape: processes, label: "downloads.apache.org"}
     D[archive.apache.org]
     ATR -->|rsync| C
     ATR -->|rsync| D
     end
 ```
 
-4. **Further Integration** - downloads.apache.org is hosted on ATR.
+4. **Further Integration** - downloads.apache.org is hosted on ATR. Downloads.apache.org is multiple servers. ATR would need to work on multiple servers
 
 ```mermaid
 flowchart TD
     subgraph Transition 4
-    ATR[ATR]
+    ATR[releases.apache.org]
     D[archive.apache.org]
     ATR -->|rsync| D
     end
