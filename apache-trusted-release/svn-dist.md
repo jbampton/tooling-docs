@@ -125,7 +125,7 @@ flowchart TD
 ```mermaid
 flowchart TD
     subgraph Transition 4
-    ATR[releases.apache.org]
+    ATR@{ shape: processes, label: "releases.apache.org"}
     D[archive.apache.org]
     ATR -->|rsync| D
     end
