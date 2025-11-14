@@ -1,4 +1,4 @@
-Title: Draft Policies around ATR process
+Title: Supply Chain Attacks FAQ
 license: https://www.apache.org/licenses/LICENSE-2.0
 
-We will list various proposed policies and policy changes. These will be speculative until approved.
+We are adding a FAQ about how, when, and if the ATR can mitigate various Supply Chain Attack scenarios,
