@@ -1,11 +1,11 @@
-Title: Apache Trusted Release Platform
+Title: Apache Trusted Releases platform
 license: https://www.apache.org/licenses/LICENSE-2.0
 
-The main project is the Apache Trusted Release Platform.
+The main project is the Apache Trusted Releases platform.
 
 Repositories:
 
-- https://github.com/apache/tooling-trusted-release
+- https://github.com/apache/tooling-trusted-releases
 - https://github.com/apache/tooling-releases-client
 
 ## 1. Automate the Release Process
@@ -64,22 +64,22 @@ Repositories:
 
 ## 5. Release Lifecycle Phases
 
-   Here is a flow chart showing the [Release Lifecycle Phases](https://github.com/apache/tooling-docs/blob/main/apache-trusted-release/lifecycle.md).
+   Here is a flow chart showing the [Release Lifecycle Phases](https://github.com/apache/tooling-docs/blob/main/apache-trusted-releases/lifecycle.md).
 
 ## 6. Infrastructure Requirements
 
    - Run book for releases.apache.org
-   - Progress on the retirement path for `svn:dist`. See [Legacy Releases from SVN Dist](https://github.com/apache/tooling-docs/blob/main/apache-trusted-release/svn-dist.md)
+   - Progress on the retirement path for `svn:dist`. See [Legacy Releases from SVN Dist](https://github.com/apache/tooling-docs/blob/main/apache-trusted-releases/svn-dist.md)
      for possible transitional states. For this first iteration _transition 2_ is preferred.
    - Legacy urls for dist.apache.org, downloads.apache.org, dlcdn.apache.org, and archive.apache.org remain supported.
    - Path schemes for downloads.apache.org, dlcdn.apache.org, and archive.apache.org remain.
 
 ## 7. Future Requirements
 
-   - Integrate with the [Security Advisory Process](https://github.com/apache/tooling-docs/blob/main/apache-trusted-release/advisory-process.md) to make it easy to track applicable advisories on download pages.
-   - Expand support for [Evaluating Build Claims](https://github.com/apache/tooling-docs/blob/main/apache-trusted-release/evaluate.md) to additional build tools.
-   - Expand automated support for additional [Distribution Channels](https://github.com/apache/tooling-docs/blob/main/apache-trusted-release/distributions.md).
-   - Include a [Signing Candidates](https://github.com/apache/tooling-docs/blob/main/apache-trusted-release/digital-signatures.md) phase during ATR processing.
+   - Integrate with the [Security Advisory Process](https://github.com/apache/tooling-docs/blob/main/apache-trusted-releases/advisory-process.md) to make it easy to track applicable advisories on download pages.
+   - Expand support for [Evaluating Build Claims](https://github.com/apache/tooling-docs/blob/main/apache-trusted-releases/evaluate.md) to additional build tools.
+   - Expand automated support for additional [Distribution Channels](https://github.com/apache/tooling-docs/blob/main/apache-trusted-releases/distributions.md).
+   - Include a [Signing Candidates](https://github.com/apache/tooling-docs/blob/main/apache-trusted-releases/digital-signatures.md) phase during ATR processing.
 
      > There are policy implications to the automation of digital signatures.
      > For now, creating digital signatures on certain artifact types must be done prior to GPG signing and

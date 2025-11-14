@@ -1,4 +1,4 @@
-Title: Apache Trusted Release Data Model
+Title: Apache Trusted Releases Data Model
 license: https://www.apache.org/licenses/LICENSE-2.0
 
 _This is a discussion and the actual implementation will diverge._

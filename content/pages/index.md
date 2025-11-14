@@ -29,7 +29,7 @@ developed by ASF Infrastructure.
 - Mailing List: dev@tooling.apache.org – [archives](https://lists.apache.org/list.html?dev@tooling.apache.org)
 - Subscribe to Mailing List: dev-subscribe@tooling.apache.org
 
-### Apache Trusted Release Platform (ATR)
+### Apache Trusted Releases (ATR) platform
 
 All ASF Projects may participate in our second Alpha testing the new automation framework.
 
