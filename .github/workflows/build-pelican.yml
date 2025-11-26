@@ -23,7 +23,6 @@ jobs:
           ref: 'main'
       - uses: apache/infrastructure-actions/pelican@ed044141796eb8ad67581cf5f4210656ffa77daa
         with:
-          persist-credentials: true
           # This must be appropriate for the branch being built
           destination: 'asf-site'
           gfm: 'true'
