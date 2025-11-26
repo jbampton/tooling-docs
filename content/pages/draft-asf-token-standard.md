@@ -73,6 +73,7 @@ Because the maximum value of a CRC-32, `0xFFFFFFFF`, is encoded by this specific
 
 ## Sample generator code
 
+```python
     def asf_secret_token(component: str) -> str:
         import secrets
         import zlib
@@ -89,6 +90,7 @@ Because the maximum value of a CRC-32, `0xFFFFFFFF`, is encoded by this specific
             n, rem = divmod(n, 62)
             checksum = alphabet[rem] + checksum
         return f"asf_{component}_{entropy}{checksum}"
+```
 
 ## Sample generated tokens
 
