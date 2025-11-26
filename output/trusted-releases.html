@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apache Trusted Release Platform - ASF Tooling Website</title>
+    <title>Apache Trusted Releases platform - ASF Tooling Website</title>
 <link rel="shortcut icon" href="https://apache.org/favicons/favicon.ico">
 <link href="/css/bootstrap.min.css" rel="stylesheet">
 <link href="/css/fontawesome.all.min.css" rel="stylesheet">
@@ -55,7 +55,9 @@
           <ul class="dropdown-menu">
             <!--<li><a class="dropdown-item" href="/blog/">Tooling Blog</a></li>-->
             <li><a class="dropdown-item" href="/team.html">About the team</a></li>
-            <li><a class="dropdown-item" href="/trusted-release.html">Trusted Releases</a></li>
+            <li><a class="dropdown-item" href="/trusted-releases.html">Trusted Releases</a></li>
+            <li><a class="dropdown-item" href="/supply-chain.html">Supply Chain Attacks FAQ</a></li>
+            <li><a class="dropdown-item" href="/policies.html">Policies</a></li>
           </ul>
         </li>
 
@@ -83,6 +85,7 @@
           <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Contribute</a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="/volunteer.html">Volunteer with Tooling</a></li>
+            <li><a class="dropdown-item" href="/job-posting.html">Job Posting</a></li>
           </ul>
         </li>
 
@@ -102,12 +105,12 @@
     <div class="bg-white p-5 rounded">
         <div class="col-sm-8 mx-auto">
           <h1>
-            Apache Trusted Release Platform
+            Apache Trusted Releases platform
           </h1>
-          <p>The main project is the Apache Trusted Release Platform.</p>
+          <p>The main project is the Apache Trusted Releases platform.</p>
 <p>Repositories:</p>
 <ul>
-<li><a href="https://github.com/apache/tooling-trusted-release">https://github.com/apache/tooling-trusted-release</a></li>
+<li><a href="https://github.com/apache/tooling-trusted-releases">https://github.com/apache/tooling-trusted-releases</a></li>
 <li><a href="https://github.com/apache/tooling-releases-client">https://github.com/apache/tooling-releases-client</a></li>
 </ul>
 <h2>1. Automate the Release Process</h2>
@@ -179,11 +182,11 @@
 <li>Announcement Email.</li>
 </ul>
 <h2>5. Release Lifecycle Phases</h2>
-<p>Here is a flow chart showing the <a href="https://github.com/apache/tooling-docs/blob/main/apache-trusted-release/lifecycle.md">Release Lifecycle Phases</a>.</p>
+<p>Here is a flow chart showing the <a href="https://github.com/apache/tooling-docs/blob/main/apache-trusted-releases/lifecycle.md">Release Lifecycle Phases</a>.</p>
 <h2>6. Infrastructure Requirements</h2>
 <ul>
 <li>Run book for releases.apache.org</li>
-<li>Progress on the retirement path for <code>svn:dist</code>. See <a href="https://github.com/apache/tooling-docs/blob/main/apache-trusted-release/svn-dist.md">Legacy Releases from SVN Dist</a>
+<li>Progress on the retirement path for <code>svn:dist</code>. See <a href="https://github.com/apache/tooling-docs/blob/main/apache-trusted-releases/svn-dist.md">Legacy Releases from SVN Dist</a>
 for possible transitional states. For this first iteration <em>transition 2</em> is preferred.</li>
 <li>Legacy urls for dist.apache.org, downloads.apache.org, dlcdn.apache.org, and archive.apache.org remain supported.</li>
 <li>Path schemes for downloads.apache.org, dlcdn.apache.org, and archive.apache.org remain.</li>
@@ -191,16 +194,16 @@ for possible transitional states. For this first iteration <em>transition 2</em>
 <h2>7. Future Requirements</h2>
 <ul>
 <li>
-<p>Integrate with the <a href="https://github.com/apache/tooling-docs/blob/main/apache-trusted-release/advisory-process.md">Security Advisory Process</a> to make it easy to track applicable advisories on download pages.</p>
+<p>Integrate with the <a href="https://github.com/apache/tooling-docs/blob/main/apache-trusted-releases/advisory-process.md">Security Advisory Process</a> to make it easy to track applicable advisories on download pages.</p>
 </li>
 <li>
-<p>Expand support for <a href="https://github.com/apache/tooling-docs/blob/main/apache-trusted-release/evaluate.md">Evaluating Build Claims</a> to additional build tools.</p>
+<p>Expand support for <a href="https://github.com/apache/tooling-docs/blob/main/apache-trusted-releases/evaluate.md">Evaluating Build Claims</a> to additional build tools.</p>
 </li>
 <li>
-<p>Expand automated support for additional <a href="https://github.com/apache/tooling-docs/blob/main/apache-trusted-release/distributions.md">Distribution Channels</a>.</p>
+<p>Expand automated support for additional <a href="https://github.com/apache/tooling-docs/blob/main/apache-trusted-releases/distributions.md">Distribution Channels</a>.</p>
 </li>
 <li>
-<p>Include a <a href="https://github.com/apache/tooling-docs/blob/main/apache-trusted-release/digital-signatures.md">Signing Candidates</a> phase during ATR processing.</p>
+<p>Include a <a href="https://github.com/apache/tooling-docs/blob/main/apache-trusted-releases/digital-signatures.md">Signing Candidates</a> phase during ATR processing.</p>
 <blockquote>
 <p>There are policy implications to the automation of digital signatures.
 For now, creating digital signatures on certain artifact types must be done prior to GPG signing and
