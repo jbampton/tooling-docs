@@ -3,7 +3,7 @@ license: https://www.apache.org/licenses/LICENSE-2.0
 
 [DRAFT STANDARD FAQ]
 
-**NOTE: This is an ASF Tooling proposal only. This is not ASF policy.**
+**NOTE: This is a FAQ for an ASF Tooling proposal only. This is not ASF policy.**
 
 This FAQ covers some feedback, largely [that of Greg Stein on Slack](https://the-asf.slack.com/archives/C086X8CKEMB/p1764212457655769), about the [Draft ASF token standard](draft-asf-token-standard.md) being proposed by ASF Tooling.
 
