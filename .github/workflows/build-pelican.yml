@@ -24,5 +24,4 @@ jobs:
         with:
           # This must be appropriate for the branch being built
           destination: 'asf-site'
-          debug: 'true'
           gfm: 'true'
