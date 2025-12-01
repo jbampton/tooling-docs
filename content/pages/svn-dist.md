@@ -36,7 +36,7 @@ The legacy domains are currently connected to `svn:dist/release` as follows:
 ### Transitional Steps
 
 ```mermaid
-flowchart TD
+flowchart LR
   subgraph Legacy
     A[svn:dist/release]
     B[rsync.apache.org]
@@ -51,7 +51,7 @@ flowchart TD
 1. **ATR writes to SVN** - ATR Releases write to `svn:dist/release` as an interim step.
 
 ```mermaid
-flowchart TD
+flowchart LR
   subgraph Transition 1
     ATR[releases.apache.org]
     A[svn:dist/release]
@@ -71,7 +71,7 @@ flowchart TD
    - (a) ATR's rsync from rsync.apache.org should detect legacy release addition and deletion.
 
 ```mermaid
-flowchart TD
+flowchart LR
   subgraph Transition 2A
     A[svn:dist/release]
     B[rsync.apache.org]
@@ -90,7 +90,7 @@ flowchart TD
    - (b) ATR coexists on rsync.apache.org and detects legacy release addition and deletion.
 
 ```mermaid
-flowchart TD
+flowchart LR
   subgraph Transition 2B
     A[svn:dist/release]
     subgraph ATR on Rsync
@@ -109,7 +109,7 @@ flowchart TD
 3. **Legacy is Retired** - `svn:dist/release` is retired.
 
 ```mermaid
-flowchart TD
+flowchart LR
   subgraph Transition 3
     ATR[releases.apache.org]
     C["downloads.apache.org"]
@@ -122,7 +122,7 @@ flowchart TD
 4. **Further Integration** - downloads.apache.org is hosted on ATR. Downloads.apache.org is multiple servers. ATR would need to work on multiple servers
 
 ```mermaid
-flowchart TD
+flowchart LR
   subgraph Transition 4
     ATR["releases.apache.org"]
     D[archive.apache.org]
